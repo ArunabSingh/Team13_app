@@ -2,6 +2,7 @@
 
 ##Team Members
 * Arunab Singh, added the main.html and list.html file to the project.
+* Dustin Lott, added the HelpPage.html file to the project.
 
 * [General info](#general-info)
 * [Technologies](#technologies)
