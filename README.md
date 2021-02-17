@@ -1,4 +1,7 @@
-## My Web Application (Title)
+## My Web Application (URide)
+
+##Team Members
+* Arunab Singh, added the main.html and list.html file to the project.
 
 * [General info](#general-info)
 * [Technologies](#technologies)
