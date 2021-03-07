@@ -1,72 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-     <!-- Bootstrap for Mobile-first, and JQuery -->
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
- 
- 
-     <!-- Optional styles and scripts of your own -->
+  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/list.css">
+
+
+
 </head>
+
 <body>
-     <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">URIDE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Compare Prices</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    
-    <div class="container">
-        <h1 class="display-4">Hello Users<br>Welcome to the List page<br>It will include the list of car company prices</h1>
+  <!-------------------------------------->
+  <!-- The following is HTML for layout -->
+  <!-------------------------------------->
+  <!-- Header Navigation Bar -->
+
+  <nav class="navbar">
+    <div class="brand-title">BESTRIDE</div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a class="navbar-active" href="form.html">USER
+            PROFILE</a></li>
+        <li><i class="fa fa-bar-chart" aria-hidden="true"></i><a class="navbar-active" href="form.html">COMPARE
+            PRICES</a></li>
+        <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
+        </li>
+        <li><i class="fa fa-sign-in" aria-hidden="true"></i><a class="navbar-active" href="login.html">LOGIN</a></li>
+        <li><i class="fa fa-user-plus" aria-hidden="true"></i><a class="navbar-active" href="signup.html">SIGNUP</a>
+        </li>
+
+      </ul>
     </div>
+  </nav>
 
-    <!-- Footer Code -->
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Thanks For Using Our App</a>
-        </div>
-      </nav>
+  <!-- Code for Displaying Previously Entered input -->
 
-    <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
-    <!----------------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  <div class="contain1">
+    <div class = enter>
+      <p>Pickup Location Entered: <span class = "start">Downtown Vancouver</span></p>
+      <p>Dropoff Location Entered: <span class = "finish">BCIT</span></p>
+    </div>
+    <div class="reenter">
+      <p>Enter Wrong Locations. Click the button below to Re-Enter</p>
+      <button onclick="goBack()">Re-Enter Locations</button>
+    </div>
+  </div>
+
+  <!-- Code for the main Contents of the page -->
+  <div class="contain2">
+    <div id="list">
+      <div id="map1"><img src="images/map1.JPG" alt="a map"></div>
+      <div class="listOpt">
+        <p><img src="images/company1.JPG"><br> <br>UBER<br></p>
+        <p>Driver For Hire</p>
+        <p>Price: $20.00<br><br><br><button href="company1.html">More Info</button></p>
+      </div>
+      <div class="listOpt">
+        <p><img src="images/company2.JPG"><br><br>LYFT<br></p>
+        <p>Driver For Hire</p>
+        <p>Price: $20.00<br><br><br><button href="company2.html">More Info</button></p>
+      </div>
+      <div class="listOpt">
+        <p><img src="images/company3.JPG"><br><br>EVO<br></p>
+        <p>Car Share</p>
+        <p>Price: $20.00<br><br><br><button href="company3.html">More Info</button></p>
+      </div>
+      <div class="listOpt">
+        <p><img src="images/company4.JPG"><br><br>MODO<br></p>
+        <p>Car Share</p>
+        <p>Price: $20.00<br><br><br><button href="company4.html">More Info</button></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Code -->
+  <div id="footer">
+    <p>2021 BESTRIDE INC. &copy; Copyright Team 13. All right reserved.</p>
+  </div>
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+  <script src="scripts/navbar.js"></script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
     </script>
 
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
-    
 </body>
+
 </html>
