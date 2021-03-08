@@ -15,7 +15,34 @@
   <link rel="stylesheet" href="styles/navbar.css">
 
   <!-- Optional styles and scripts of your own -->
-
+  <style>
+    header {
+      background-image: url(images/helpBackground.jpg);
+      height: 5em;
+      width: 100%;
+      position: relative;
+      border-bottom: 1.5px solid black;
+    }
+    header h1 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 2px 2px 8px black;
+      font-size: 36pt;
+    }
+    a p {
+      margin-top: -6%;
+      font-size: 20pt;
+      font-weight: 600;
+      color: cornflowerblue;
+    }
+    #picFAQ {
+      width: 60%;
+    }
+  </style>
 
 </head>
 
@@ -48,19 +75,25 @@
     </div>
   </nav>
 
+<!-- HelpPage starts here -->
 
-  <div class="container">
-    <h1 style=text-align:center="display-4">Help</h1>
-  </div>
+    <header>
+      <h1>Help</h1>
+    </header>
 
-  <div style="margin-left: 124pt;" class="row align-items-center">
-    <div class="col">
-      FAQs
-    </div>
-    <div class="col">
-      Live Chat
-    </div>
-  </div>
+
+
+  <a class="btn btn-default" href="FAQs.html">
+      <img id="picFAQ" src="images/FAQ.jpg"a>
+      <p>FAQs</p>
+  </a>
+
+    <a class="btn btn-default" href="ContactUs.html">
+      <img id="picFAQ" src="images/contactUs.jpg"a>
+      <p>Contact Us</p>
+  </a>
+
+
 
   <!-- Footer Code -->
   <div id="footer">
