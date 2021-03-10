@@ -1,0 +1,15 @@
+.FAQ-question {
+    color: blue;
+    overflow: hidden;
+}
+
+.FAQ-container {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.FAQ-answers {
+    width: 80%;
+    overflow: hidden;
+    margin-left: 10%;
+}
