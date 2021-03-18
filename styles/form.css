@@ -17,7 +17,19 @@ form{
     color: white;
 }
 
-#pickupLocation, #dropoffLocation{
+.drop1:hover, .drop2:hover, .drop3:hover, .compare:hover {
+    background-color: grey;
+}
+
+.drop1, .drop2, .drop3{
+    height: 3em;
+}
+
+.compare{
+    height: 4em;
+}
+
+#pickupLocation{
     width: 300px;
     height: 40px;
 }

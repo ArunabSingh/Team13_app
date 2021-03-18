@@ -57,7 +57,7 @@
             margin-left: 12px;
             padding: 0 11px 0 13px;
             text-overflow: ellipsis;
-            width: 200px;
+            width: 250px;
         }
 
         #origin-input:focus,
@@ -94,7 +94,7 @@
                 this.directionsRenderer.setMap(map);
                 const originInput = document.getElementById("origin-input");
                 const destinationInput = document.getElementById("destination-input");
-                const modeSelector = document.getElementById("mode-selector");
+                // const modeSelector = document.getElementById("mode-selector");
                 const originAutocomplete = new google.maps.places.Autocomplete(
                     originInput
                 );
