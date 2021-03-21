@@ -14,201 +14,17 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&libraries=places">
-    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&libraries=places"> -->
+    <!-- </script> -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/formcopy.css">
+
 
 
     <!-- Optional styles and scripts of your own -->
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-         * element that contains the map. */
-        #map {
-            height: 60%;
-            width: 80%;
-            margin-left: 10%;
-            margin-top: 10%;
-            border-radius: 12px 12px 12px 12px;
-            border: 5px double white;
-        }
-
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background: rgb(39, 38, 38);
-        }
-
-        .controls {
-            margin-bottom: 15px;
-            margin-top: 10px;
-            border: 6px double white;
-            border-radius: 12px 12px 12px 12px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            height: 54px;
-            outline: none;
-            background: transparent;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        #origin-input,
-        #destination-input {
-            background-color: black;
-            color: white;
-            font-family: Roboto;
-            font-size: 13pt;
-            font-weight: 400;
-            margin-left: 5%;
-            padding: 0 11px 0 13px;
-            text-overflow: ellipsis;
-            width: 90%;
-        }
-
-        #origin-input:focus,
-        #destination-input:focus {
-            border-color: #4d90fe;
-        }
-
-        ::placeholder {
-            /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: white;
-            opacity: 1;
-            /* Firefox */
-        }
-
-        :-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
-            color: white;
-        }
-
-        ::-ms-input-placeholder {
-            /* Microsoft Edge */
-            color: white;
-        }
-    </style>
-
-    <script>
-        // This example requires the Places library. Include the libraries=places
-        // parameter when you first load the API. For example:
-
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                streetViewControl: false,
-                fullscreenControl: false,
-                mapTypeControl: false,
-                center: {
-                    lat: 49.2588,
-                    lng: -122.9294
-                },
-                zoom: 9.2,
-            });
-            new AutocompleteDirectionsHandler(map);
-        }
-
-        class AutocompleteDirectionsHandler {
-            constructor(map) {
-                this.map = map;
-                this.originPlaceId = "";
-                this.destinationPlaceId = "";
-                this.travelMode = google.maps.TravelMode.DRIVING;
-                this.directionsService = new google.maps.DirectionsService();
-                this.directionsRenderer = new google.maps.DirectionsRenderer();
-                this.directionsRenderer.setMap(map);
-                const originInput = document.getElementById("origin-input");
-                const destinationInput = document.getElementById("destination-input");
-                // const modeSelector = document.getElementById("mode-selector");
-                const originAutocomplete = new google.maps.places.Autocomplete(
-                    originInput
-                );
-                // Specify just the place data fields that you need.
-                originAutocomplete.setFields(["place_id"]);
-                const destinationAutocomplete = new google.maps.places.Autocomplete(
-                    destinationInput
-                );
-                // Specify just the place data fields that you need.
-                destinationAutocomplete.setFields(["place_id"]);
-                this.setupClickListener(
-                    "changemode-walking",
-                    google.maps.TravelMode.WALKING
-                );
-                this.setupClickListener(
-                    "changemode-transit",
-                    google.maps.TravelMode.TRANSIT
-                );
-                this.setupClickListener(
-                    "changemode-driving",
-                    google.maps.TravelMode.DRIVING
-                );
-                this.setupPlaceChangedListener(originAutocomplete, "ORIG");
-                this.setupPlaceChangedListener(destinationAutocomplete, "DEST");
-                this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(
-                    originInput
-                );
-                this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(
-                    destinationInput
-                );
-                //this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(
-                //    modeSelector
-                //);
-            }
-            // Sets a listener on a radio button to change the filter type on Places
-            // Autocomplete.
-            setupClickListener(id, mode) {
-                const radioButton = document.getElementById(id);
-                radioButton.addEventListener("click", () => {
-                    this.travelMode = mode;
-                    this.route();
-                });
-            }
-            setupPlaceChangedListener(autocomplete, mode) {
-                autocomplete.bindTo("bounds", this.map);
-                autocomplete.addListener("place_changed", () => {
-                    const place = autocomplete.getPlace();
-
-                    if (!place.place_id) {
-                        window.alert("Please select an option from the dropdown list.");
-                        return;
-                    }
-
-                    if (mode === "ORIG") {
-                        this.originPlaceId = place.place_id;
-                    } else {
-                        this.destinationPlaceId = place.place_id;
-                    }
-                    this.route();
-                });
-            }
-            route() {
-                if (!this.originPlaceId || !this.destinationPlaceId) {
-                    return;
-                }
-                const me = this;
-                this.directionsService.route({
-                        origin: {
-                            placeId: this.originPlaceId
-                        },
-                        destination: {
-                            placeId: this.destinationPlaceId
-                        },
-                        travelMode: this.travelMode,
-                    },
-                    (response, status) => {
-                        if (status === "OK") {
-                            me.directionsRenderer.setDirections(response);
-                        } else {
-                            window.alert("Directions request failed due to " + status);
-                        }
-                    }
-                );
-            }
-        }
-    </script>
 
 </head>
 
@@ -235,48 +51,62 @@
                 <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active"
                         href="help.html">HELP</a>
                 </li>
-                <li><i class="fa fa-sign-in" aria-hidden="true"></i><a class="navbar-active" href="login.html">LOGIN</a>
+                <li><i class="fa fa-sign-in" aria-hidden="true"></i><a class="navbar-active">LOGGED IN AS </a>
                 </li>
-                <li><i class="fa fa-user-plus" aria-hidden="true"></i><a class="navbar-active"
-                        href="signup.html">SIGNUP</a>
+                <li><i class="fa fa-user-plus" aria-hidden="true"></i><a class="navbar-active" id="btnLogout">LOGOUT</a>
                 </li>
 
             </ul>
         </div>
     </nav>
 
-    <div style="display: none">
-        <input id="origin-input" class="controls" type="text" placeholder="Enter a pickup location:"/>
+    <div id="map"></div>
+    <div id="elements">
+        <input id="origin-input" class="controls" type="text" placeholder="Enter an origin location" />
+        <br>
+        <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location" />
+        <br>
 
-        <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location:" />
+        <h3>Enter Your Pickup and dropoff location on the map to the left and then click below to proceed:</h3>
+        <br>
 
+
+        <input type="button" value="Calculate Distance" onclick="calculateDistance()">
+        <br>
+        <input type="text" id="dist">
+        <input type="text" id="dura">
+
+        <button type="submit" value="Submit" href = "list.html">Get Estimate</button>
         <div id="mode-selector" class="controls">
-            <input type="radio" name="type" id="changemode-walking" checked="checked" />
-            <label for="changemode-walking">Walking</label>
-
-            <input type="radio" name="type" id="changemode-transit" />
-            <label for="changemode-transit">Transit</label>
+            <!-- <input type="radio" name="type" id="changemode-walking" checked="checked" /> -->
+            <!-- <label for="changemode-walking">Walking</label>
+  
+          <input type="radio" name="type" id="changemode-transit" />
+          <label for="changemode-transit">Transit</label> -->
 
             <input type="radio" name="type" id="changemode-driving" />
             <label for="changemode-driving">Driving</label>
         </div>
     </div>
-
-
-    <div id="map"></div>
+    <!-- Footer Code -->
+    <div id="footer">
+        <p>2021 BESTRIDE INC. &copy; Copyright Team 13. All right reserved.</p>
+    </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&callback=initMap&libraries=places&v=weekly"
         async></script>
 
-    <!-- Footer Code -->
-    <div id="footer">
-        <p>2021 BESTRIDE INC. &copy; Copyright Team 13. All right reserved.</p>
-    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
+    <script src="scripts/firebase_api_BESTRIDE.js"></script>
 
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/formcopy.js"></script>
 
 </body>
 

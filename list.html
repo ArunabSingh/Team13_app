@@ -14,9 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/list.css">
-
-
-
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 </head>
 
 <body>
@@ -42,7 +40,7 @@
         <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
         </li>
         <li><i class="fa fa-sign-in" aria-hidden="true"></i><a class="navbar-active" href="login.html">LOGIN</a></li>
-        <li><i class="fa fa-user-plus" aria-hidden="true"></i><a class="navbar-active" href="signup.html">SIGNUP</a>
+        <li><i class="fa fa-user-plus" aria-hidden="true"></i><a id = "btnLogout" class="navbar-active">Log Out</a>
         </li>
 
       </ul>
@@ -52,9 +50,11 @@
   <!-- Code for Displaying Previously Entered input -->
 
   <div class="contain1">
-    <div class = enter>
-      <p>Pickup Location Entered: <span class = "start">Downtown Vancouver</span></p>
-      <p>Dropoff Location Entered: <span class = "finish">BCIT</span></p>
+    <div class=enter>
+      <p>Pickup Location Entered: <span class="start">Downtown Vancouver</span></p>
+      <p>Dropoff Location Entered: <span class="finish">BCIT</span></p>
+      <p>Distance: <span id="totalDistance"></span></p>
+
     </div>
     <div class="reenter">
       <p>Enter Wrong Locations. Click the button below to Re-Enter</p>
@@ -66,24 +66,24 @@
   <div class="contain2">
     <div id="list">
       <div id="map1"><img src="images/map1.JPG" alt="a map"></div>
-      <div class="listOpt">
-        <p><img src="images/company1.JPG"><br> <br>UBER<br></p>
-        <p>Driver For Hire</p>
+      <div class="listOpt comp1">
+        <p><img id="compImg1" src=""><br> <br> <span id="compName1"><span><br></p>
+        <p id = "type1"></p>
         <p>Price: $20.00<br><br><br><button href="company1.html">More Info</button></p>
       </div>
-      <div class="listOpt">
-        <p><img src="images/company2.JPG"><br><br>LYFT<br></p>
-        <p>Driver For Hire</p>
+      <div class="listOpt comp2">
+        <p><img id="compImg2" src=""><br><br><span id="compName2"><span><br></p>
+        <p id = "type2"></p>
         <p>Price: $20.00<br><br><br><button href="company2.html">More Info</button></p>
       </div>
-      <div class="listOpt">
-        <p><img src="images/company3.JPG"><br><br>EVO<br></p>
-        <p>Car Share</p>
+      <div class="listOpt comp3">
+        <p><img id="compImg3" src=""><br><br><span id="compName3"><span><br></p>
+        <p id = "type3"></p>
         <p>Price: $20.00<br><br><br><button href="company3.html">More Info</button></p>
       </div>
-      <div class="listOpt">
-        <p><img src="images/company4.JPG"><br><br>MODO<br></p>
-        <p>Car Share</p>
+      <div class="listOpt comp4">
+        <p><img id="compImg4" src=""><br><br><span id="compName4"><span><br></p>
+        <p id = "type4"></p>
         <p>Price: $20.00<br><br><br><button href="company4.html">More Info</button></p>
       </div>
     </div>
@@ -97,19 +97,22 @@
   <!----------------------------------------------->
   <!-- JS: Boostrap, Firebase, API related    -->
   <!----------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
 
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+
+  <script src="scripts/firebase_api_BESTRIDE.js"></script>
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
   <script src="scripts/navbar.js"></script>
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-    </script>
+  <script src="scripts/list.js"></script>
 
 </body>
 
