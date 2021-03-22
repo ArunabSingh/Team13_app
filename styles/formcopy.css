@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-    height: 100%;
-    width: 70%;
-    float: left;
+    height: 60%;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 12px 12px 12px 12px;
+    border: 5px double black;
 }
+
 #output {
     font-size: 11px;
 }
@@ -17,33 +22,77 @@ body {
     padding: 0;
 }
 
-#elements{
-    float: right;
+#header {
+    height: 8%;
+    position: relative;
+
+}
+
+h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28pt;
+    word-spacing: .4em;
+    font-weight: 420;
+    text-shadow: 1px 1px 1px gray;
+}
+
+#elements {
     width: 20%;
     margin-right: 20px;
 }
 
+#hiddenCalcDistance {
+    display: none;
+}
+
 .controls {
+    margin-bottom: 15px;
     margin-top: 10px;
-    border: 1px solid transparent;
-    border-radius: 2px 0 0 2px;
+    border: 6px double white;
+    border-radius: 12px 12px 12px 12px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    height: 32px;
+    height: 54px;
     outline: none;
+    background: transparent;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 #origin-input,
 #destination-input {
-    background-color: #fff;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 12px;
+    background-color: black;
+    color: white;
+    font-family: Monoton;
+    font-size: 9pt;
+    word-spacing: .4em;
+    font-weight: 220;
+    margin-left: 5%;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 200px;
+    width: 90%;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
 }
 
 #origin-input:focus,
@@ -52,13 +101,32 @@ body {
 }
 
 #mode-selector {
+    display: none;
     color: #fff;
     background-color: #4d90fe;
     margin-left: 12px;
     padding: 5px 11px 0px 11px;
 }
 
-#btnLogout{
+#btnLogout {
     cursor: pointer;
 }
 
+#dist {
+    display: none;
+}
+
+#dura {
+    display: none;
+}
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: Monoton;
+    font-size: 14pt;
+    word-spacing: .4em;
+    font-weight: 220;
+    margin-top: -2.5rem;
+}
