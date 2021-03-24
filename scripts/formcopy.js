@@ -1,6 +1,6 @@
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
-
+const submitEntry = document.querySelector("#submission");
 const btnLogout = document.getElementById("btnLogout");
 
 btnLogout.addEventListener("click", function (e) {
@@ -113,10 +113,6 @@ class AutocompleteDirectionsHandler {
             async (response, status) => {
                 if (status === "OK") {
                     await me.directionsRenderer.setDirections(response);
-                    // var center = response.routes[0].overview_path[Math.floor(response.routes[0].overview_path.length / 2)];
-                    // infowindow.setPosition(center);
-                    // infowindow.setContent(response.routes[0].legs[0].distance.text);
-                    // infowindow.open(me.map);
                 } else {
                     window.alert("Directions request failed due to " + status);
                 }
@@ -149,27 +145,44 @@ function calculateDistance() {
 function callback(response, status) {
     var orig = document.getElementById("origin-input"),
         dest = document.getElementById("destination-input"),
-        dist = document.getElementById("dist");
+        dist = document.getElementById("dist"),
+        dura = document.getElementById("dura");
 
     if (status == "OK") {
         orig.value = response.originAddresses[0];
         dest.value = response.destinationAddresses[0];
         dist.value = response.rows[0].elements[0].distance.text;
-        writeData(orig.value, dest.value, dist.value);
+        dura.value = response.rows[0].elements[0].duration.text;
+
+        // writeData(orig.value, dest.value, dist.value, dura.value);
+        localStorage.setItem('originLocation', orig.value);
+        localStorage.setItem('destLocation', dest.value);
+        localStorage.setItem('totalDistance', dist.value);
+        localStorage.setItem('totalDuration', dura.value);
+        console.log(orig.value);
+        console.log(dest.value);
+        console.log(dist.value);
+        console.log(dura.value);
+
     } else {
         alert("Error: " + status);
     }
 }
+submitEntry.addEventListener('submit', function(){
+    localStorage.setItem('originLocation', orig.value);
+    localStorage.setItem('destLocation', dest.value);
+    localStorage.setItem('totalDistance', dist.value);
+    localStorage.setItem('totalDuration', dura.value);
+});
 
 
+// function writeData(orig, dest, dist, dura) {
+//     var routesRef = db.collection("routes");
 
-function writeData(orig, dest, dist) {
-    var routesRef = db.collection("routes");
-
-    routesRef.add({
-        oringinLocation: orig,
-        destinationLocation: dest,
-        distance: dist,
-    });
-}
-
+//     routesRef.add({
+//         oringinLocation: orig,
+//         destinationLocation: dest,
+//         distance: dist,
+//         duration: dura
+//     });
+// }
