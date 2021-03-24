@@ -3,11 +3,16 @@ var destination = localStorage.getItem('destLocation');
 var distance = localStorage.getItem('totalDistance');
 var duration = localStorage.getItem('totalDuration');
 
+console.log(origin);
+console.log(destination);
+console.log(distance);
+console.log(duration);
+
+
 document.querySelector('#start').innerHTML = origin;
 document.querySelector('#finish').innerHTML = destination;
 document.querySelector('#totalDistance').innerHTML = distance;
 document.querySelector('#totalDuration').innerHTML = duration;
-
 
 function readUberDetails(){
     const uber = db.collection("Companies").doc("Uber");

@@ -12,12 +12,14 @@ btnLogout.addEventListener("click", function (e) {
 
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
+        streetViewControl: false,
+        fullscreenControl: false,
         mapTypeControl: false,
         center: {
-            lat: 49.1688,
-            lng: -122.7195
+            lat: 49.2588,
+            lng: -122.9294
         },
-        zoom: 10,
+        zoom: 9.2,
     });
     new AutocompleteDirectionsHandler(map);
 }
@@ -27,13 +29,13 @@ class AutocompleteDirectionsHandler {
         this.map = map;
         this.originPlaceId = "";
         this.destinationPlaceId = "";
-        this.travelMode = google.maps.TravelMode.WALKING;
+        this.travelMode = google.maps.TravelMode.DRIVING;
         this.directionsService = new google.maps.DirectionsService();
         this.directionsRenderer = new google.maps.DirectionsRenderer();
         this.directionsRenderer.setMap(map);
         const originInput = document.getElementById("origin-input");
         const destinationInput = document.getElementById("destination-input");
-        const modeSelector = document.getElementById("mode-selector");
+        //const modeSelector = document.getElementById("mode-selector");
         const originAutocomplete = new google.maps.places.Autocomplete(
             originInput
         );
@@ -61,12 +63,12 @@ class AutocompleteDirectionsHandler {
         this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(
             originInput
         );
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(
+        this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(
             destinationInput
         );
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(
-            modeSelector
-        );
+        //this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(
+        //    modeSelector
+        //);
 
     }
     // Sets a listener on a radio button to change the filter type on Places

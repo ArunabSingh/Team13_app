@@ -60,23 +60,26 @@
         </div>
     </nav>
 
+    <div id="header">
+        <h1>Compare Prices</h1>
+    </div>
+
     <div id="map"></div>
     <div id="elements">
-        <input id="origin-input" class="controls" type="text" placeholder="Enter an origin location" />
+        <input id="origin-input" class="controls" type="text" placeholder="Enter a pickup location:" />
         <br>
-        <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location" />
+        <input id="destination-input" class="controls" type="text" placeholder="Enter a Dropoff location:" />
         <br>
-
-        <h3>Enter Your Pickup and dropoff location on the map to the left and then click below to proceed:</h3>
         <br>
+    </div>
 
 
-        <input type="button" value="Calculate Distance" onclick="calculateDistance()">
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a id = "submission" class="btn btn-outline-dark btn-xl" href="list.html"  onclick="calculateDistance()" role="button" type="submit">Get Estimate</a>
         <br>
         <input type="text" id="dist">
         <input type="text" id="dura">
 
-        <button id = "submission" type="submit" value="Submit">Get Estimate</button>
         <div id="mode-selector" class="controls">
             <!-- <input type="radio" name="type" id="changemode-walking" checked="checked" /> -->
             <!-- <label for="changemode-walking">Walking</label>
@@ -88,6 +91,8 @@
             <label for="changemode-driving">Driving</label>
         </div>
     </div>
+
+
     <!-- Footer Code -->
     <div id="footer">
         <p>2021 BESTRIDE INC. &copy; Copyright Team 13. All right reserved.</p>
