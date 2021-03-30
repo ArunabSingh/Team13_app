@@ -9,4 +9,7 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+  //making auth and firestore references
+  const auth = firebase.auth();
   const db = firebase.firestore();
