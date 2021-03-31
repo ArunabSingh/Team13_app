@@ -42,7 +42,7 @@ h1 {
     text-decoration: wavy;
     font-weight: 420;
     text-shadow: 1px 1px 1px gray;
-    color: #CC142D;
+    color: #FEC10B;
 }
 
 #elements {
@@ -101,13 +101,13 @@ h1 {
 
 #origin-input:focus,
 #destination-input:focus {
-    border-color: #CC142D;
+    border-color: #FEC10B;
 }
 
 #mode-selector {
     display: none;
     color: #fff;
-    background-color: #CC142D;
+    background-color: #FEC10B;
     margin-left: 12px;
     padding: 5px 11px 0px 11px;
 }
@@ -133,11 +133,11 @@ h1 {
     word-spacing: .4em;
     font-weight: 220;
     margin-top: -2.5rem;
-    color: #CC142D;
+    color: #FEC10B;
     border: 5px double black;
 }
 
 .btn-xl:hover{
-    border-color: #CC142D;
-    color: #CC142D;
+    border-color: #FEC10B;
+    color: #FEC10B;
 }
