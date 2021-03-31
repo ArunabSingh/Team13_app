@@ -1,14 +1,6 @@
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
 const submitEntry = document.querySelector("#submission");
-const btnLogout = document.getElementById("btnLogout");
-
-btnLogout.addEventListener("click", function (e) {
-    var promise = firebase.auth().signOut();
-    promise.then(function () {
-        window.location.href = '../index.html';
-    });
-});
 
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -127,13 +119,13 @@ function initialize() {
     google.maps.event.addDomListener(window, "load", calculateDistance);
 }
 
+submitEntry.addEventListener('click', getEstimate);
 
 function getEstimate() {
     calculateDistance();
-    location.href = "list.html";
 }
 
-function calculateDistance() {
+async function calculateDistance() {
     // Distance Calculation
     const service = new google.maps.DistanceMatrixService();
     const origin = document.getElementById("origin-input").value;
@@ -162,35 +154,40 @@ function callback(response, status) {
         dist.value = response.rows[0].elements[0].distance.text;
         dura.value = response.rows[0].elements[0].duration.text;
 
-        // writeData(orig.value, dest.value, dist.value, dura.value);
-        localStorage.setItem('originLocation', orig.value);
-        localStorage.setItem('destLocation', dest.value);
-        localStorage.setItem('totalDistance', dist.value);
-        localStorage.setItem('totalDuration', dura.value);
-        console.log(orig.value);
-        console.log(dest.value);
-        console.log(dist.value);
-        console.log(dura.value);
+        // writeData();
 
-    } else {
-        alert("Error: " + status);
+        setDataPage1(orig.value, dest.value, dist.value, dura.value);
+        location.href = "list.html";
     }
 }
-//submitEntry.addEventListener('submit', function(){
-//    localStorage.setItem('originLocation', orig.value);
-//    localStorage.setItem('destLocation', dest.value);
-//    localStorage.setItem('totalDistance', dist.value);
-//    localStorage.setItem('totalDuration', dura.value);
-//});
 
-
-// function writeData(orig, dest, dist, dura) {
-//     var routesRef = db.collection("routes");
-
-//     routesRef.add({
-//         oringinLocation: orig,
-//         destinationLocation: dest,
-//         distance: dist,
-//         duration: dura
-//     });
+// function writeData() {
+//     firebase.auth().onAuthStateChanged(function (user) {
+//         db.collection("users")
+//             .doc(user.uid).update({
+//                 "originLocation": document.getElementById("origin-input").value,
+//                 "destinationLocation": document.getElementById("destination-input").value,
+//                 "distance": document.getElementById("dist").value,
+//                 "duration": document.getElementById("dura").value
+//             })
+//     })
 // }
+
+function setDataPage1(ol, dl, di, du) {
+    //construct the JSON object here
+    //you can get from user input form
+    var myLocation = ol;
+    var myDestlocation = dl;
+    var myDistance = di;
+    var myDuration = du;
+    var obj = {
+        "originLoc": myLocation,
+        "destLoc": myDestlocation,
+        "totalDist": myDistance,
+        "totalDur": myDuration
+    }
+
+    //save the object to local storage
+    console.log(obj);
+    localStorage.setItem('formdata', JSON.stringify(obj));
+}

@@ -34,16 +34,24 @@
     </a>
     <div class="navbar-links">
       <ul>
-        <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a class="navbar-active" href="form.html">USER
+        <li style="display:none;" class="logged-out"><span><i class="fa fa-user" aria-hidden="true"></i></span><a
+            class="" href="form.html">USER
             PROFILE</a></li>
-        <li><i class="fa fa-bar-chart" aria-hidden="true"></i><a class="navbar-active" href="form.html">COMPARE
+        <li style="display:none;" class="logged-out"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""
+            href="form.html">COMPARE
             PRICES</a></li>
         <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
         </li>
-        <li><i class="fa fa-sign-in" aria-hidden="true"></i><a class="navbar-active" href="login.html">LOGIN</a></li>
-        <li><i class="fa fa-user-plus" aria-hidden="true"></i><a class="navbar-active" href="signup.html">SIGNUP</a>
+        <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
+            class="navbar-active" href="login.html">LOGIN</a></li>
+        <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
+            class="navbar-active"><span id="username"></span></a></li>
+        <li style="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
+            class="navbar-active" href="login.html">SIGNUP</a>
         </li>
-
+        <li id="btnLogout" style="display:none;" class="logged-out"><i class="fa fa-sign-out" aria-hidden="true"></i><a
+            class="navbar-active" href="">LOGOUT</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -52,7 +60,7 @@
 
 
   <header>
-    <h1>Welcome Back</h1>
+    <h1>Welcome</h1>
   </header>
 
   <div id="loginBackground">

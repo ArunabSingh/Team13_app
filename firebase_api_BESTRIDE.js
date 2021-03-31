@@ -8,4 +8,6 @@
     appId: "1:570741020759:web:15a46aab1ea961f48eeb12"
   };
   // Initialize Firebase
-  firebase.initializeApp(config);
+  //making auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();

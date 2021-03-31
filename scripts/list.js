@@ -1,181 +1,138 @@
-var origin = localStorage.getItem('originLocation');
-var destination = localStorage.getItem('destLocation');
-var distance = localStorage.getItem('totalDistance');
-var duration = localStorage.getItem('totalDuration');
-
-console.log(origin);
-console.log(destination);
-console.log(distance);
-console.log(duration);
+const origin = document.querySelector("#start");
+const destination = document.querySelector("#finish");
+const distance = document.querySelector("#totalDistance");
+const duration = document.querySelector("#totalDuration");
 
 
-document.querySelector('#start').innerHTML = origin;
-document.querySelector('#finish').innerHTML = destination;
-document.querySelector('#totalDistance').innerHTML = distance;
-document.querySelector('#totalDuration').innerHTML = duration;
+var myobj = JSON.parse(localStorage.getItem('formdata'));
+console.log(myobj);
+//do something with the object
+//console.log(myobj.name);   //to print name field
 
-function readUberDetails(){
+origin.innerHTML = myobj.originLoc;
+destination.innerHTML = myobj.destLoc;
+distance.innerHTML = myobj.totalDist;
+duration.innerHTML = myobj.totalDur;
+
+
+var distInKm = parseFloat(distance.innerHTML);
+console.log(distInKm);
+var durInMins = parseFloat(duration.innerHTML);
+console.log(durInMins);
+// var res = distance.slice(0, distance.length - 2);
+// var distRide = parseFloat(res);
+// console.log(distRide);
+
+//Calculating fares based on distance and duration
+//UBER
+function uber() {
+    const baseFare1 = 6;
+    const farePerKm1 = 1.5;
+    var price = 0;
+    if (distInKm <= 4) {
+        price = baseFare1;
+        document.querySelector("#uberPrice").innerHTML = price;
+    } else {
+        price = (6 + (distInKm - 4) * farePerKm1);
+        document.querySelector("#uberPrice").innerHTML = price;
+    }
+}
+uber();
+
+//LYFT
+function lyft() {
+    const baseFare2 = 7;
+    const farePerKm2 = 1.7;
+    var price = 0;
+
+    if (distInKm <= 4) {
+        price = baseFare2;
+        document.querySelector("#lyftPrice").innerHTML = price;
+    } else {
+        price = (baseFare2 + (distInKm - 4) * farePerKm2);
+        document.querySelector("#lyftPrice").innerHTML = price;
+    }
+}
+lyft();
+
+
+
+
+function readUberDetails() {
     const uber = db.collection("Companies").doc("Uber");
 
-    uber.onSnapshot(function(snap){
-        document.querySelector("#compName1").innerHTML = snap.data().name;    //using vanilla javascript
+    uber.onSnapshot(function (snap) {
+        document.querySelector("#compName1").innerHTML = snap.data().name; //using vanilla javascript
     });
 
-    uber.onSnapshot(function(snap){
+    uber.onSnapshot(function (snap) {
         let logo = document.querySelector("#compImg1");
-        logo.src = snap.data().logo; 
+        logo.src = snap.data().logo;
     });
 
-    uber.onSnapshot(function(snap){
-        document.querySelector("#type1").innerHTML = snap.data().rideType;    //using vanilla javascript
+    uber.onSnapshot(function (snap) {
+        document.querySelector("#type1").innerHTML = snap.data().rideType; //using vanilla javascript
     });
 }
 
 readUberDetails();
 
-function readLyftDetails(){
+function readLyftDetails() {
     const lyft = db.collection("Companies").doc("Lyft");
 
-    lyft.onSnapshot(function(snap){
-        document.querySelector("#compName2").innerHTML = snap.data().name;    //using vanilla javascript
+    lyft.onSnapshot(function (snap) {
+        document.querySelector("#compName2").innerHTML = snap.data().name; //using vanilla javascript
     });
 
-    lyft.onSnapshot(function(snap){
+    lyft.onSnapshot(function (snap) {
         let logoLyft = document.querySelector("#compImg2");
-        logoLyft.src = snap.data().logo; 
+        logoLyft.src = snap.data().logo;
     });
 
-    lyft.onSnapshot(function(snap){
-        document.querySelector("#type2").innerHTML = snap.data().rideType;    //using vanilla javascript
+    lyft.onSnapshot(function (snap) {
+        document.querySelector("#type2").innerHTML = snap.data().rideType; //using vanilla javascript
     });
 }
 readLyftDetails();
 
-function readEvoDetails(){
+function readEvoDetails() {
     const evo = db.collection("Companies").doc("Evo");
 
-    evo.onSnapshot(function(snap){
-        document.querySelector("#compName3").innerHTML = snap.data().name;    //using vanilla javascript
+    evo.onSnapshot(function (snap) {
+        document.querySelector("#compName3").innerHTML = snap.data().name; //using vanilla javascript
     });
 
-    evo.onSnapshot(function(snap){
+    evo.onSnapshot(function (snap) {
         let logoEvo = document.querySelector("#compImg3");
-        logoEvo.src = snap.data().logo; 
+        logoEvo.src = snap.data().logo;
     });
 
-    evo.onSnapshot(function(snap){
-        document.querySelector("#type3").innerHTML = snap.data().rideType;    //using vanilla javascript
+    evo.onSnapshot(function (snap) {
+        document.querySelector("#type3").innerHTML = snap.data().rideType; //using vanilla javascript
     });
 }
 
 readEvoDetails();
 
-function readModoDetails(){
+function readModoDetails() {
     const modo = db.collection("Companies").doc("Modo");
 
-    modo.onSnapshot(function(snap){
-        document.querySelector("#compName4").innerHTML = snap.data().name;    //using vanilla javascript
+    modo.onSnapshot(function (snap) {
+        document.querySelector("#compName4").innerHTML = snap.data().name; //using vanilla javascript
     });
 
-    modo.onSnapshot(function(snap){
+    modo.onSnapshot(function (snap) {
         let logoModo = document.querySelector("#compImg4");
-        logoModo.src = snap.data().logo; 
+        logoModo.src = snap.data().logo;
     });
 
-    modo.onSnapshot(function(snap){
-        document.querySelector("#type4").innerHTML = snap.data().rideType;    //using vanilla javascript
+    modo.onSnapshot(function (snap) {
+        document.querySelector("#type4").innerHTML = snap.data().rideType; //using vanilla javascript
     });
 }
+
 readModoDetails();
-
-// function readCompanyName(){
-//     db.collection("Companies").doc("")
-//     .onSnapshot(function(snap){
-//         document.querySelector("#compName3").innerHTML = snap.data().Evo;    //using vanilla javascript
-//     })
-
-//     db.collection("Companies").doc("CarShare")
-//     .onSnapshot(function(snap){
-//         document.querySelector("#compName4").innerHTML = snap.data().Modo;    //using vanilla javascript
-//     })
-
-//     db.collection("Companies").doc("DriverForHire")
-//     .onSnapshot(function(snap){
-//         document.querySelector("#compName1").innerHTML = snap.data().Uber;    //using vanilla javascript
-//     })
-
-//     db.collection("Companies").doc("DriverForHire")
-//     .onSnapshot(function(snap){
-//         document.querySelector("#compName2").innerHTML = snap.data().Lyft;    //using vanilla javascript
-//     })
-// }
-// readCompanyName();
-
-// function readCompanyLogo(){
-//     db.collection("Logos").doc("Uber")
-//     .onSnapshot(function(snap){
-//         let logo1 = document.querySelector("#compImg1");
-//         logo1.src = snap.data().img;    //using vanilla javascript
-//     })
-
-//     db.collection("Logos").doc("Lyft")
-//     .onSnapshot(function(snap){
-//         let logo2 = document.querySelector("#compImg2");
-//         logo2.src = snap.data().img;    //using vanilla javascript
-//     })
-
-//     db.collection("Logos").doc("Evo")
-//     .onSnapshot(function(snap){
-//         let logo3 = document.querySelector("#compImg3");
-//         logo3.src = snap.data().img;    //using vanilla javascript
-//     })
-
-//     db.collection("Logos").doc("Modo")
-//     .onSnapshot(function(snap){
-//         let logo4 = document.querySelector("#compImg4");
-//         logo4.src = snap.data().img;    //using vanilla javascript
-//     })
-// }
-
-// readCompanyLogo();
-
-// function readRideType(){
-//     db.collection("ride-type").doc("driverForHire")
-//     .onSnapshot(function(snap){
-//         document.querySelector("#type1").innerHTML = snap.data().typeName;    //using vanilla javascript
-//     })
-
-//     db.collection("ride-type").doc("driverForHire")
-//     .onSnapshot(function(snap){ 
-//         document.querySelector("#type2").innerHTML = snap.data().typeName;    //using vanilla javascript
-//     })
-
-//     db.collection("ride-type").doc("carShare")
-//     .onSnapshot(function(snap){
-//         document.querySelector("#type3").innerHTML = snap.data().typeName;    //using vanilla javascript
-//     })
-
-//     db.collection("ride-type").doc("carShare")
-//     .onSnapshot(function(snap){                     //.data() returns data object
-//         document.querySelector("#type4").innerHTML = snap.data().typeName;    //using vanilla javascript
-//     })
-// }
-
-// readRideType();
-
-// function readDistance(){
-//     db.collection("users").doc(user.uid)
-//     .onSnapshot(function(snap){
-//         document.querySelector("#totalDistance").innerHTML = snap.data().distance;    //using vanilla javascript
-//     })
-// }
-
-//formula for uber
-
 
 function goBack() {
     window.history.back();
-  }
-
-
-
+}

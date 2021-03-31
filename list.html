@@ -33,16 +33,24 @@
     </a>
     <div class="navbar-links">
       <ul>
-        <li><span><i class="fa fa-user" aria-hidden="true"></i></span><a class="navbar-active" href="form.html">USER
+        <li style="display:none;" class="logged-in"><span><i class="fa fa-user" aria-hidden="true"></i></span><a
+            class="" href="form.html">USER
             PROFILE</a></li>
-        <li><i class="fa fa-bar-chart" aria-hidden="true"></i><a class="navbar-active" href="form.html">COMPARE
+        <li style="display:none;" class="logged-in"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""
+            href="form.html">COMPARE
             PRICES</a></li>
         <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
         </li>
-        <li><i class="fa fa-sign-in" aria-hidden="true"></i><a class="navbar-active" href="login.html">LOGIN</a></li>
-        <li><i class="fa fa-user-plus" aria-hidden="true"></i><a id = "btnLogout" class="navbar-active">Log Out</a>
+        <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
+            class="navbar-active" href="login.html">LOGIN</a></li>
+        <li style="display:none;" class="logged-in"><i class="fa fa-sign-in" aria-hidden="true"></i><a
+            class="navbar-active"><span id="username"></span></a></li>
+        <li style="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
+            class="navbar-active" href="login.html">SIGNUP</a>
         </li>
-
+        <li id="btnLogout" style="display:none;" class="logged-in"><i class="fa fa-sign-out" aria-hidden="true"></i><a
+            class="navbar-active">LOGOUT</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -71,22 +79,22 @@
       <div class="listOpt comp1">
         <p><img id="compImg1" src=""><br> <br> <span id="compName1"><span><br></p>
         <p id = "type1"></p>
-        <p>Price: $20.00<br><br><br><button href="company1.html">More Info</button></p>
+        <p>Price: $<span id="uberPrice"></span><br><br><br><button href="company1.html">More Info</button></p>
       </div>
       <div class="listOpt comp2">
         <p><img id="compImg2" src=""><br><br><span id="compName2"><span><br></p>
         <p id = "type2"></p>
-        <p>Price: $20.00<br><br><br><button href="company2.html">More Info</button></p>
+        <p>Price: $<span id="lyftPrice"></span><br><br><br><button href="company2.html">More Info</button></p>
       </div>
       <div class="listOpt comp3">
         <p><img id="compImg3" src=""><br><br><span id="compName3"><span><br></p>
         <p id = "type3"></p>
-        <p>Price: $20.00<br><br><br><button href="company3.html">More Info</button></p>
+        <p>Price: $<span id = "evoPrice"></span><br><br><br><button href="company3.html">More Info</button></p>
       </div>
       <div class="listOpt comp4">
         <p><img id="compImg4" src=""><br><br><span id="compName4"><span><br></p>
         <p id = "type4"></p>
-        <p>Price: $20.00<br><br><br><button href="company4.html">More Info</button></p>
+        <p>Price: $<span id="modoPrice"></span><br><br><br><button href="company4.html">More Info</button></p>
       </div>
     </div>
   </div>
@@ -110,6 +118,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
   <script src="scripts/firebase_api_BESTRIDE.js"></script>
+  <script src="scripts/auth.js"></script>
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
