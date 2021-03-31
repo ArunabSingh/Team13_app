@@ -127,11 +127,17 @@ function initialize() {
     google.maps.event.addDomListener(window, "load", calculateDistance);
 }
 
+
+function getEstimate() {
+    calculateDistance();
+    location.href = "list.html";
+}
+
 function calculateDistance() {
     // Distance Calculation
     const service = new google.maps.DistanceMatrixService();
     const origin = document.getElementById("origin-input").value;
-    const destination = document.getElementById("destination-input").value;;
+    const destination = document.getElementById("destination-input").value;
 
     // const geocoder = new google.maps.Geocoder();
     service.getDistanceMatrix({
@@ -170,12 +176,12 @@ function callback(response, status) {
         alert("Error: " + status);
     }
 }
-submitEntry.addEventListener('submit', function(){
-    localStorage.setItem('originLocation', orig.value);
-    localStorage.setItem('destLocation', dest.value);
-    localStorage.setItem('totalDistance', dist.value);
-    localStorage.setItem('totalDuration', dura.value);
-});
+//submitEntry.addEventListener('submit', function(){
+//    localStorage.setItem('originLocation', orig.value);
+//    localStorage.setItem('destLocation', dest.value);
+//    localStorage.setItem('totalDistance', dist.value);
+//    localStorage.setItem('totalDuration', dura.value);
+//});
 
 
 // function writeData(orig, dest, dist, dura) {
