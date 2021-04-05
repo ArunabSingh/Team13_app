@@ -14,7 +14,7 @@ body {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to top, hsla(130, 61%, 71%, 0.986), #FEC10B);
+    background-image: linear-gradient(to top, hsla(130, 61%, 71%, 0.986), #1DD73C);
     color: black;
     border-radius: 0px 0px 4px 4px;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 .navbar-links li:hover {
-    background-image: linear-gradient(hsla(130, 61%, 71%, 0.986), #FEC10B);
+    background-image: linear-gradient(rgba(25, 102, 38, 0.986), #1DD73C);
     border-radius: 0px 0px 22px 22px;
     border: 0px double rgb(0,0,0,.2);
 }
@@ -76,7 +76,7 @@ body {
 }
 
 .toggle-button .bar:hover{
-    background-color: black;
+    background-color: #FEC10B;
     border: 4px double rgb(0,0,0,.2);
 }
 
