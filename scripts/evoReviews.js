@@ -4,7 +4,7 @@ var stars = [false, false, false, false, false];
 function addReview() {
     let reviewTitle = document.getElementById('reviewTitle');
     let reviewContent = document.getElementById('reviewContent');
-    firebase.firestore().collection('Companies').doc('Uber').collection('Reviews').add({
+    firebase.firestore().collection('Companies').doc('Evo').collection('Reviews').add({
         title: reviewTitle.value,
         content: reviewContent.value,
         rating: stars
@@ -29,7 +29,7 @@ function mark(name, writing, key, star) {
     for (let index = 0; index <= star; index++) {
         stars[index] = true
     }
-    firebase.firestore().collection('Companies').doc('Uber').collection('Reviews').doc(key).set({
+    firebase.firestore().collection('Companies').doc('Evo').collection('Reviews').doc(key).set({
         title: name,
         content: writing,
         rating: stars
@@ -37,7 +37,7 @@ function mark(name, writing, key, star) {
     stars = [false, false, false, false, false];
 }
 (() => {
-    firebase.firestore().collection('Companies').doc('Uber').collection('Reviews')
+    firebase.firestore().collection('Companies').doc('Evo').collection('Reviews')
     .onSnapshot(function(querySnapshot) {
 
         document.getElementById('divRender').innerHTML = '';
