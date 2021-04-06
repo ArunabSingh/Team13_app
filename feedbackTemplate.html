@@ -29,9 +29,49 @@
       margin-bottom: 1rem;
     }
 
+    #contents{
+      background-color: #e8f6e8;
+      width: 1200px;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 1px solid rgba(0, 0, 0, .5);
+    }
+
+    #reviewTitle{
+      margin-left: 1rem;
+    }
+
     #reviewContent{
       height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
     }
+
+    h2 {
+      margin-left: 1rem;
+    }
+    
+    label {
+      margin-left: 1rem;
+    }
+
+    button {
+      margin-left: 1rem;
+    }
+
+    #divRender{
+      margin-left: 1rem;
+      
+    }
+    
+    input {
+      
+    }
+
+    .form-control{
+      width: 95%;
+    }
+
 
   </style>
 
@@ -76,14 +116,14 @@
 
   <!-- HelpPage starts here -->
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
+  <div id="contents">
+    <div>
+      <div>
         <br>
-        <div class="row">
-          <h2>Uber Reveiws</h2>
+        <div>
+          <h2>Uber Reviews</h2>
         </div>
-        <div class="row">
+        <div>
           <form>
             <div class="form-group">
               <label>Create a review:</label>
@@ -91,17 +131,24 @@
               <textarea class="form-control" id="reviewContent" placeholder="Enter details" rows="4" cols="70"></textarea>
             </div>
 
-            <button type="button" onclick="addReview()" class="btn btn-primary">Submit Review</button>
+            <button type="button" onclick="addReview()" class="btn btn-primary">Submit then Give Rating</button>
           </form>
         </div>
+        <br>
       </div>
 
 
-      <div id="divRender" class="col-md-8">
+      <div id="divRender">
 
 
       </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 
 

@@ -1,15 +1,36 @@
 .FAQ-question {
-    color: blue;
+    color: #33a852;
     overflow: hidden;
 }
 
 .FAQ-container {
     width: 80%;
     margin-left: 10%;
+    background-color: white;
+}
+
+.FAQ-container:visited{
+    outline: black;
 }
 
 .FAQ-answers {
     width: 80%;
     overflow: hidden;
     margin-left: 10%;
+}
+
+button:active{
+    background-color: white;
+}
+
+button:focus{
+    background-color: white;
+}
+
+body{
+    background-color: white;
+}
+
+#contents{
+    background-color: #e8f6e8;
 }

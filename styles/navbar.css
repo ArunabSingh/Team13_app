@@ -14,9 +14,13 @@ body {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to top, hsla(130, 61%, 71%, 0.986), #1DD73C);
+    background-color: #33a852;
     color: black;
     border-radius: 0px 0px 4px 4px;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, .5);
 }
 
 .brand-title {
@@ -52,7 +56,7 @@ body {
 }
 
 .navbar-links li:hover {
-    background-image: linear-gradient(rgba(25, 102, 38, 0.986), #1DD73C);
+    background-image: linear-gradient(rgba(25, 102, 38, 0.986), #33a852);
     border-radius: 0px 0px 22px 22px;
     border: 0px double rgb(0,0,0,.2);
 }
@@ -115,13 +119,16 @@ body {
 
 #footer{
     display: flex;
-    width: 100%;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, .5);
     padding-top: 10px;
     justify-content: center;
     color: black;
-    background-image: linear-gradient(hsla(130, 61%, 71%, 0.986), #1DD73C);
+    background-color: #33a852;
     height: 50px;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     font-size: 10pt;
 }
