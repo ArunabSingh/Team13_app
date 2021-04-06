@@ -15,8 +15,9 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="styles/navbargreenr.css">
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/profile.css">
+
 
 </head>
 
@@ -57,24 +58,12 @@
       </ul>
     </div>
   </nav>
-
-  <!-- The main content on the page -->
-  <div id="bg">
-    <div class="banner"></div>
-    <div class="background">
-      <div id="textBox">
-        <div id="para">
-          <p id="p1">Tired of the high-priced Car Riding Options?</p>
-          <p id="p2">Look no further!</p>
-          <p id="p3">Our app will compare prices among numerous <br> car riding options and present you with best prices
-            for
-            your journey.</p>
-        </div>
-        <div id='button-container'>
-          <a class="button1" href='/login.html'>Get Started</a>
-        </div>
-      </div>
-    </div>
+  
+  <div id = "profile">
+      <h1 id = "name">Name: <span id="userName">arunab</span></h1>
+      <div id = "email">Email: <span id="userEmail">arun@arunab.com</span></div>
+      <h3 id = "previous">Previous Searches</h3>
+      <div id="Searches"></div>
   </div>
 
 
@@ -104,6 +93,8 @@
   <!--------------------------------------------------------------------->
 
   <script src="scripts/navbar.js"></script>
+  <script src="scripts/profile.js"></script>
+
 </body>
 
 </html>

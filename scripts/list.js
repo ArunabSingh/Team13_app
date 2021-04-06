@@ -3,7 +3,6 @@ const destination = document.querySelector("#finish");
 const distance = document.querySelector("#totalDistance");
 const duration = document.querySelector("#totalDuration");
 
-
 var myobj = JSON.parse(localStorage.getItem('formdata'));
 console.log(myobj);
 //do something with the object
@@ -14,6 +13,17 @@ destination.innerHTML = myobj.destLoc;
 distance.innerHTML = myobj.totalDist;
 duration.innerHTML = myobj.totalDur;
 
+firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users").doc(user.uid)
+        .collection("Routes").add({
+            "OriginLocation": myobj.originLoc,
+            "DestinationLocation": myobj.destLoc,
+            "Distance": myobj.totalDist,
+            "Duration": myobj.totalDur,
+        }).catch((err) => {
+            console.log(err)
+        })
+})
 
 var distInKm = parseFloat(distance.innerHTML);
 console.log(distInKm);
@@ -27,14 +37,14 @@ console.log(durInMins);
 //UBER
 function uber() {
     const baseFare1 = 6;
-    const farePerKm1 = 1.5;
+    const farePerKm1 = 0.8;
     var price = 0;
     if (distInKm <= 4) {
         price = baseFare1;
-        document.querySelector("#uberPrice").innerHTML = price;
+        document.querySelector("#uberPrice").innerHTML = price.toFixed(2);
     } else {
         price = (6 + (distInKm - 4) * farePerKm1);
-        document.querySelector("#uberPrice").innerHTML = price;
+        document.querySelector("#uberPrice").innerHTML = price.toFixed(2);
     }
 }
 uber();
@@ -42,19 +52,48 @@ uber();
 //LYFT
 function lyft() {
     const baseFare2 = 7;
-    const farePerKm2 = 1.7;
+    const farePerKm2 = 1;
     var price = 0;
 
     if (distInKm <= 4) {
         price = baseFare2;
-        document.querySelector("#lyftPrice").innerHTML = price;
+        document.querySelector("#lyftPrice").innerHTML = price.toFixed(2);
     } else {
         price = (baseFare2 + (distInKm - 4) * farePerKm2);
-        document.querySelector("#lyftPrice").innerHTML = price;
+        document.querySelector("#lyftPrice").innerHTML = price.toFixed(2);
     }
 }
 lyft();
 
+//UBER
+function evo() {
+    const baseFare1 = 17;
+    const farePerKm1 = 1;
+    var price = 0;
+    if (distInKm <= 10) {
+        price = baseFare1;
+        document.querySelector("#evoPrice").innerHTML = price.toFixed(2);
+    } else {
+        price = (baseFare1 + (distInKm - 10) * farePerKm1);
+        document.querySelector("#evoPrice").innerHTML = price.toFixed(2);
+    }
+}
+evo();
+
+//LYFT
+function modo() {
+    const baseFare2 = 19;
+    const farePerKm2 = 1.1;
+    var price = 0;
+    if (distInKm <= 11) {
+        price = baseFare2;
+        document.querySelector("#modoPrice").innerHTML = price.toFixed(2);
+    } else {
+        price = (baseFare2 + (distInKm - 11) * farePerKm2);
+        document.querySelector("#modoPrice").innerHTML = price.toFixed(2);
+    }
+}
+modo();
 
 
 
@@ -130,7 +169,6 @@ function readModoDetails() {
         document.querySelector("#type4").innerHTML = snap.data().rideType; //using vanilla javascript
     });
 }
-
 readModoDetails();
 
 function goBack() {

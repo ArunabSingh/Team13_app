@@ -1,0 +1,37 @@
+#profile {
+    background-color: #e8f6e8;
+    margin: auto 10%;
+    font-size: 25px;
+    padding: 1em;
+}
+
+#Searches {
+    margin: auto 10%;
+    text-align: left;
+    margin: 20px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.trip h4 {
+    text-align: center;
+}
+.trip{
+    padding: 10px;
+    background: whitesmoke;
+    border: 5px solid #c1c1c1;
+    border-radius: 15px;
+}
+
+@media (max-width: 720px) {
+    #profile {
+        margin: auto 2%;
+    }
+
+    #Searches {
+        margin: auto 5%;
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,5 +1,3 @@
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
 const submitEntry = document.querySelector("#submission");
 
 function initMap() {
@@ -38,14 +36,6 @@ class AutocompleteDirectionsHandler {
         );
         // Specify just the place data fields that you need.
         destinationAutocomplete.setFields(["place_id"]);
-        // this.setupClickListener(
-        //     "changemode-walking",
-        //     google.maps.TravelMode.WALKING
-        // );
-        // this.setupClickListener(
-        //     "changemode-transit",
-        //     google.maps.TravelMode.TRANSIT
-        // );
         this.setupClickListener(
             "changemode-driving",
             google.maps.TravelMode.DRIVING
@@ -58,11 +48,8 @@ class AutocompleteDirectionsHandler {
         this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(
             destinationInput
         );
-        //this.map.controls[google.maps.ControlPosition.LEFT_TOP].push(
-        //    modeSelector
-        //);
-
     }
+
     // Sets a listener on a radio button to change the filter type on Places
     // Autocomplete.
     setupClickListener(id, mode) {
@@ -123,15 +110,14 @@ submitEntry.addEventListener('click', getEstimate);
 
 function getEstimate() {
     calculateDistance();
+    // storeData();
 }
 
 async function calculateDistance() {
-    // Distance Calculation
     const service = new google.maps.DistanceMatrixService();
     const origin = document.getElementById("origin-input").value;
     const destination = document.getElementById("destination-input").value;
 
-    // const geocoder = new google.maps.Geocoder();
     service.getDistanceMatrix({
         origins: [origin],
         destinations: [destination],
@@ -154,25 +140,19 @@ function callback(response, status) {
         dist.value = response.rows[0].elements[0].distance.text;
         dura.value = response.rows[0].elements[0].duration.text;
 
-        // writeData();
-
         setDataPage1(orig.value, dest.value, dist.value, dura.value);
         location.href = "list.html";
     }
 }
 
-// function writeData() {
-//     firebase.auth().onAuthStateChanged(function (user) {
-//         db.collection("users")
-//             .doc(user.uid).update({
-//                 "originLocation": document.getElementById("origin-input").value,
-//                 "destinationLocation": document.getElementById("destination-input").value,
-//                 "distance": document.getElementById("dist").value,
-//                 "duration": document.getElementById("dura").value
-//             })
-//     })
-// }
-
+/**
+ * This function stores the values of user inputs (origin location and destination location)
+ * and calculated distance and duration into localStorage.
+ * @param {String} ol origin Location- entered by user
+ * @param {String} dl destination Location- entered by user
+ * @param {String} di distance - calculated inside the calculateDistance function
+ * @param {String} du duration - calculated inside the calculateDistance function
+ */
 function setDataPage1(ol, dl, di, du) {
     //construct the JSON object here
     //you can get from user input form
@@ -188,6 +168,25 @@ function setDataPage1(ol, dl, di, du) {
     }
 
     //save the object to local storage
-    console.log(obj);
     localStorage.setItem('formdata', JSON.stringify(obj));
 }
+
+/**
+ * Function for storing all the origin and destinations
+ * locations entered by the user into a subcollection
+ * called Routes located inside each user collection.
+ */
+//  function storeData() {
+//     firebase.auth().onAuthStateChanged(function (user) {
+//         db.collection("users").doc(user.uid)
+//             .collection("Routes").add({
+//                 "OriginLocation": myobj.originLoc,
+//                 "DestinationLocation": myobj.destLoc,
+//                 "Distance": myobj.totalDist,
+//                 "Duration": myobj.totalDur,
+//             }).catch((err) => {
+//                 console.log(err)
+//             })
+//     })
+// }
+// storeData();
