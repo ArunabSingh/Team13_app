@@ -1,3 +1,17 @@
+body {
+ height: 1000px;
+ background-color: white;
+}
+
+#contents{
+  background-color: #e8f6e8;
+  width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, .5);
+  position: relative;
+}
+
 header {
     background-image: url(../images/helpBackground.jpg);
     background-repeat: stretch;
@@ -7,6 +21,7 @@ header {
     position: relative;
     border-bottom: 1.5px solid black;
   }
+
   header h1 {
     margin: 0;
     position: absolute;
@@ -17,12 +32,26 @@ header {
     text-shadow: 2px 2px 8px black;
     font-size: 36pt;
   }
+
+  a{
+    margin: 0 auto;
+  }
+  
   a p {
-    margin-top: -6%;
+    margin-top: -5%;
     font-size: 20pt;
     font-weight: 600;
-    color: cornflowerblue;
+    color: #33a852;
   }
   #picFAQ {
-    width: 60%;
+    width: 520px;
+    max-width: 100%;
+    margin: 0 auto;
   }
+
+  .buttonDivs{
+    display: flex;
+  }
+
+
+

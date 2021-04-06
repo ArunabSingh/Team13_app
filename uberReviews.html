@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="styles/navbar.css">
 
   <!-- Optional styles and scripts of your own -->
-  <link rel="stylesheet" href="styles/help.css">
+  <script src="https://kit.fontawesome.com/f9fc02e319.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/reviews.css">
 
 </head>
 
@@ -58,32 +59,46 @@
 
   <!-- HelpPage starts here -->
 
+  <div id="contents">
+    <div>
+      <div>
+        <br>
+        <div>
+          <h2>Uber Reviews</h2>
+        </div>
+        <div>
+          <form>
+            <div class="form-group">
+              <label>Create a review:</label>
+              <input type="text" class="form-control" id="reviewTitle" placeholder="Enter Title of the review" required>
+              <textarea class="form-control" id="reviewContent" placeholder="Enter details" rows="4" cols="70" required></textarea>
+            </div>
+            
+
+            <button type="button" onclick="addReview()" class="btn btn-outline-dark btn-xl">Submit then Give Rating</button>
+          </form>
+        </div>
+        
+      </div>
+      <br>
+        <br>
+      <div id="spacer"></div>
+      <br>
+      <br>
 
 
+      <div id="divRender">
 
-<div id="contents">
-  <div class="buttonDivs">
-  <a id="button1" class="btn btn-default" href="FAQs.html">
-    <img id="picFAQ" src="images/FAQ.jpg" a>
-    <p>FAQs</p>
-  </a>
-</div>
-<div class="buttonDivs">
-  <a id="button2" class="btn btn-default" href="ContactUs.html">
-    <img id="picFAQ" src="images/contactUs.jpg" a>
-    <p>Contact Us</p>
-  </a>
-</div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
+
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 
 
   <!-- Footer Code -->
@@ -111,6 +126,7 @@
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
   <script src="scripts/navbar.js"></script>
+  <script src="scripts/uberReviews.js"></script>
 
 
 </body>
