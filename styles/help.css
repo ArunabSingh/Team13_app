@@ -3,6 +3,7 @@ body {
  background-color: white;
 }
 
+
 #contents{
   background-color: #e8f6e8;
   width: 1200px;
@@ -51,6 +52,17 @@ header {
 
   .buttonDivs{
     display: flex;
+  }
+
+  @media (max-width: 1020px){
+    #picFAQ {
+      width: 400px;
+    }
+  }
+  @media (max-width: 720px){
+    #picFAQ {
+      width: 300px;
+    }
   }
 
 

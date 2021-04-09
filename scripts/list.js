@@ -170,7 +170,3 @@ function readModoDetails() {
     });
 }
 readModoDetails();
-
-function goBack() {
-    window.history.back();
-}

@@ -1,3 +1,40 @@
+
+#subHead{
+    display: grid;
+    grid-template-columns: 45% 65%;
+    margin: 10px;
+}
+#title-of-page{
+    text-align: left;
+    font-size: 45px;
+    font-weight: 900;
+    color: darkgreen;
+}
+
+body{
+    background-color: #e8f6e8;
+}
+
+.wrapper{
+    background-color: #e8f6e8;
+}
+
+.reenter{
+    text-align: left;
+}
+
+.reenter button{
+    background-color: #e8f6e8;
+    border: white;
+    font-size: 45px;
+    color: green;
+}
+
+.reenter button:Hover{
+    background-color: darkseagreen;
+}
+
+
 .FAQ-question {
     color: #33a852;
     overflow: hidden;

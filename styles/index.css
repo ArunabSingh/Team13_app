@@ -3,7 +3,6 @@
 
  body {
      font-family: 'Dosis', sans-serif;
-
  }
 
  #bg {
@@ -78,4 +77,52 @@
      background-color: white;
      opacity: 0.9;
      box-shadow: 3px 3px 15px rgb(0, 0, 0, 1);
+ }
+
+ @media (max-width: 1020px){
+    #para {
+        text-align: center;
+        padding-top: 6px;
+        font-size: 16pt;
+        line-height: 1.5;
+    }
+   
+    #p1 {
+        font-size: 6vh;
+        margin: 4vh auto;
+    }
+   
+    #p2 {
+        font-size: 3vh;
+        margin: 2vh auto;
+    }
+   
+    #p3 {
+        font-size: 4vh;
+       margin: 2vh auto;
+    }
+ }
+
+ @media (max-width: 460px){
+    #para {
+        text-align: center;
+        padding-top: 6px;
+        font-size: 14pt;
+        line-height: 1.5;
+    }
+   
+    #p1 {
+        font-size: 5vh;
+        margin: 4vh auto;
+    }
+   
+    #p2 {
+        font-size: 2.5vh;
+        margin: 2vh auto;
+    }
+   
+    #p3 {
+        font-size: 3.5vh;
+       margin: 2vh auto;
+    }
  }

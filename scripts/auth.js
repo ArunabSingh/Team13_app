@@ -44,14 +44,6 @@ btnLogout.addEventListener("click", function (e) {
     });
 });
 
-//   firebase.auth().onAuthStateChanged(function(user){
-//     db.collection("users").doc(user.uid).update(
-//     {
-//     "name":user.displayName, 
-//     "email":user.email,
-//     "originLocation" : "",
-//     "destinationLocation" : "",
-//     "distance" : 0,
-//     "duration" : 0
-//     });
-// });
+function goBack() {
+    window.history.back();
+}

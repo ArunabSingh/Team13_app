@@ -17,8 +17,7 @@ body {
     background-color: #33a852;
     color: black;
     border-radius: 0px 0px 4px 4px;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     border: 1px solid rgba(0, 0, 0, .5);
 }
@@ -68,19 +67,18 @@ body {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    width: 35px;
+    height: 30px;
 }
 
 .toggle-button .bar {
-    height: 3px;
+    height: 4px;
     width: 100%;
     background-color: black;
     border-radius: 10px;
 }
 
-.toggle-button .bar:hover {
-    background-color: #FEC10B;
+.toggle-button:hover {
     border: 4px double rgb(0, 0, 0, .2);
 }
 
@@ -119,8 +117,7 @@ body {
 
 #footer {
     display: flex;
-    width: 1200px;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     border: 1px solid rgba(0, 0, 0, .5);
     padding-top: 10px;

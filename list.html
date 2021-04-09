@@ -34,7 +34,7 @@
     <div class="navbar-links">
       <ul>
         <li style="display:none;" class="logged-in"><span><i class="fa fa-user" aria-hidden="true"></i></span><a
-            class="" href="form.html">USER
+            class="" href="profile.html">USER
             PROFILE</a></li>
         <li style="display:none;" class="logged-in"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""
             href="form.html">COMPARE
@@ -57,44 +57,39 @@
 
   <!-- Code for Displaying Previously Entered input -->
 
+  <div class="reenter">
+    <button onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+  </div>
   <div class="contain1">
     <div class=enter>
-      <p>Pickup Location Entered: <span id="start"></span></p>
-      <p>Dropoff Location Entered: <span id="finish">BCIT</span></p>
-      <p>Distance: <span id="totalDistance"></span></p>
-      <p>Duration: <span id="totalDuration"></span></p>
-
-
-    </div>
-    <div class="reenter">
-      <p>Entered Wrong Locations. Click the button below to Re-Enter</p>
-      <button onclick="goBack()">Re-Enter Locations</button>
+      <p>Pickup Location Entered:<br> <span id="start"></span></p>
+      <p>Dropoff Location Entered:<br> <span id="finish">BCIT</span></p>
+      <p>Distance: <span id="totalDistance"></span> Duration: <span id="totalDuration"></span></p>
     </div>
   </div>
 
   <!-- Code for the main Contents of the page -->
   <div class="contain2">
     <div id="list">
-      <div id="map1"><img src="images/map1.JPG" alt="a map"></div>
       <div class="listOpt comp1">
         <p><img id="compImg1" src=""><br> <br> <span id="compName1"><span><br></p>
-        <p id = "type1"></p>
-        <p>Price: $<span id="uberPrice"></span><br><br><br><button href="company1.html">More Info</button></p>
+        <p id="type1"></p>
+        <p>Price: $<span id="uberPrice"></span><br><br><br><button href="company1.html">Get App</button></p>
       </div>
       <div class="listOpt comp2">
         <p><img id="compImg2" src=""><br><br><span id="compName2"><span><br></p>
-        <p id = "type2"></p>
-        <p>Price: $<span id="lyftPrice"></span><br><br><br><button href="company2.html">More Info</button></p>
+        <p id="type2"></p>
+        <p>Price: $<span id="lyftPrice"></span><br><br><br><button href="company2.html">Get App</button></p>
       </div>
       <div class="listOpt comp3">
         <p><img id="compImg3" src=""><br><br><span id="compName3"><span><br></p>
-        <p id = "type3"></p>
-        <p>Price: $<span id = "evoPrice"></span><br><br><br><button href="company3.html">More Info</button></p>
+        <p id="type3"></p>
+        <p>Price: $<span id="evoPrice"></span><br><br><br><button href="company3.html">Get App</button></p>
       </div>
       <div class="listOpt comp4">
         <p><img id="compImg4" src=""><br><br><span id="compName4"><span><br></p>
-        <p id = "type4"></p>
-        <p>Price: $<span id="modoPrice"></span><br><br><br><button href="company4.html">More Info</button></p>
+        <p id="type4"></p>
+        <p>Price: $<span id="modoPrice"></span><br><br><br><button href="company4.html">Get App</button></p>
       </div>
     </div>
   </div>

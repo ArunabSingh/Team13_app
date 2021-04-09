@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
 
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -21,6 +23,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* body{
+    background: ;
+} */
 
 #header {
     height: 8%;
@@ -70,12 +76,12 @@ h1 {
 
 #origin-input,
 #destination-input {
-    background-color: black;
-    color: white;
-    font-family: Monoton;
-    font-size: 9pt;
+    color: black;
+    background-color: white;
+    font-family: Roborto;
+    font-size: 15pt;
     word-spacing: .4em;
-    font-weight: 220;
+    font-weight: 300;
     margin-left: 5%;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
@@ -84,7 +90,7 @@ h1 {
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
+    color: black;
     opacity: 1;
     /* Firefox */
 }
@@ -101,7 +107,7 @@ h1 {
 
 #origin-input:focus,
 #destination-input:focus {
-    border-color: #CC142D;
+    border-color: green;
 }
 
 #mode-selector {
