@@ -29,7 +29,7 @@
       margin-bottom: 1rem;
     }
 
-    #contents{
+    .modalContents{
       background-color: #e8f6e8;
       width: 1200px;
       max-width: 100%;
@@ -47,19 +47,19 @@
       margin-left: 1rem;
     }
 
-    h2 {
+    .reviewCompany {
       margin-left: 1rem;
     }
     
-    label {
+    .createReviewLabel {
       margin-left: 1rem;
     }
 
-    button {
+    .addReviewButton {
       margin-left: 1rem;
       
     }
-    button:hover{
+    .addReviewButton:hover{
       color:  #33a852;
     }
 
@@ -71,7 +71,7 @@
       width: 95%;
     }
 
-    #spacer{
+    .spacer{
       background-color: #33a852;
       opacity: .7;
       height: 1px;
@@ -90,7 +90,7 @@
       margin: 1rem 0 1rem 1rem;
     }
 
-    i {
+    .fas fa-star {
       margin-left: 1rem;
     }
 
@@ -138,30 +138,30 @@
 
   <!-- HelpPage starts here -->
 
-  <div id="contents">
+  <div class="modalContents">
     <div>
       <div>
         <br>
         <div>
-          <h2>Uber Reviews</h2>
+          <h2 class="reviewCompany">Uber Reviews</h2>
         </div>
         <div>
           <form>
             <div class="form-group">
-              <label>Create a review:</label>
+              <label class="createReviewLabel">Create a review:</label>
               <input type="text" class="form-control" id="reviewTitle" placeholder="Enter Title of the review" required>
               <textarea class="form-control" id="reviewContent" placeholder="Enter details" rows="4" cols="70" required></textarea>
             </div>
             
 
-            <button type="button" onclick="addReview()" class="btn btn-outline-dark btn-xl">Submit then Give Rating</button>
+            <button type="button" onclick="addReview()" class="btn btn-outline-dark btn-xl addReviewButton">Submit then Give Rating</button>
           </form>
         </div>
         
       </div>
       <br>
         <br>
-      <div id="spacer"></div>
+      <div class="spacer"></div>
       <br>
       <br>
 
