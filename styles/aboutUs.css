@@ -1,0 +1,26 @@
+.profile-pictures{
+    border: 4px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+#mission{
+    text-align: center;
+    margin: auto 10%;
+    background-color: powderblue;
+    border: 5px black solid;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#concerns{
+    text-align: center;
+    margin: auto 10%;
+    background-color: powderblue;
+    border: 5px black solid;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
