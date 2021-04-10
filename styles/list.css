@@ -8,21 +8,37 @@
     font-weight: 700;
 }
 
-.contain1 {
+.reenter{
+    margin: 10px;
+    font-size: 25px;
     background-color: white;
-    padding: 10px;
+}
+
+.background-image {
+    background-image: url(../images/listbg2.JPG);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+    height: 60vh;
+}
+
+.background-color {
+    text-align: center;
+    height: 70%;
+    background-color: white;
+    opacity: 0.6;
+    box-shadow: 3px 3px 15px rgb(0, 0, 0, 1);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 #start,
 #finish {
-    padding: 2px 15px;
+    padding: 15px 15px;
     margin-left: 10px;
     color: black;
-    height: 3em;
-
-    background-color: cornsilk;
+    background-color: white;
     border: solid 1px grey;
     border-radius: 3px;
 }
@@ -62,12 +78,6 @@
     display: flex;
     border-radius: 20px;
     justify-content: space-evenly;
-}
-
-.reenter{
-    margin: 10px;
-    font-size: 25px;
-    background-color: white;
 }
 
 @media (max-width: 850px) {

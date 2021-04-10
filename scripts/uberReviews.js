@@ -1,7 +1,7 @@
 //test stop.
 var stars = [false, false, false, false, false];
 
-function addReview() {
+function addUberReview() {
     let reviewTitle = document.getElementById('reviewTitle');
     let reviewContent = document.getElementById('reviewContent');
     firebase.firestore().collection('Companies').doc('Uber').collection('Reviews').add({

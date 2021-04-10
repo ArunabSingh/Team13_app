@@ -1,0 +1,154 @@
+    .fa-star {
+      font-size: 2rem;
+      cursor: pointer;
+      margin: 0px;
+    }
+
+    .form-control{
+      padding: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .modalContents{
+      background-color: #e8f6e8;
+      width: 1200px;
+      max-width: 100%;
+      margin: 0 auto;
+      border: 1px solid rgba(0, 0, 0, .5);
+    }
+    
+    #reviewTitle{
+      margin-left: 1rem;
+    }
+
+    #reviewContent{
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
+    }
+    
+    #reviewTitleLyft{
+      margin-left: 1rem;
+    }
+
+    #reviewContentLyft{
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
+    }
+    
+    #reviewTitleEvo{
+      margin-left: 1rem;
+    }
+
+    #reviewContentEvo{
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
+    }
+
+    #reviewTitleModo{
+      margin-left: 1rem;
+    }
+
+    #reviewContentModo{
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
+    }
+
+    .reviewCompany {
+      margin-left: 1rem;
+    }
+    
+    .createReviewLabel {
+      margin-left: 1rem;
+    }
+
+    .addReviewButton {
+      margin-left: 1rem;
+      
+    }
+    .addReviewButton:hover{
+      color:  #33a852;
+    }
+
+    #divRender{
+      margin-left: 1rem;
+    }
+    
+    #divRenderLyft{
+      margin-left: 1rem;
+    }
+    
+    #divRenderEvo{
+      margin-left: 1rem;
+    }
+
+    #divRenderModo{
+      margin-left: 1rem;
+    }
+
+    .form-control{
+      width: 95%;
+    }
+
+    .spacer{
+      background-color: #33a852;
+      opacity: .7;
+      height: 1px;
+      margin-left: 1rem;
+    }
+
+    #existingDetailsInput {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    #existingDetailsInput + div {
+      margin-left: 1rem;
+    }
+
+    #newDetailsInput {
+      margin: 1rem 0 1rem 1rem;
+    }
+    
+    #existingDetailsInputLyft {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    #existingDetailsInputLyft + div {
+      margin-left: 1rem;
+    }
+
+    #newDetailsInputLyft {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    #existingDetailsInputEvo {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    #existingDetailsInputEvo + div {
+      margin-left: 1rem;
+    }
+
+    #newDetailsInputEvo {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    #existingDetailsInputModo {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    #existingDetailsInputModo + div {
+      margin-left: 1rem;
+    }
+
+    #newDetailsInputModo {
+      margin: 1rem 0 1rem 1rem;
+    }
+
+    .fas fa-star {
+      margin-left: 1rem;
+    }
