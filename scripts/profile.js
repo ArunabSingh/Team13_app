@@ -28,6 +28,7 @@ getUserName();
 function displayData() {
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users").doc(user.uid).collection("Routes") //Refers to the subcollection called Routes inside every user collection
+            .limit(10)
             .get()
             .then(function (snap) {
                 snap.forEach(function (doc) {
