@@ -1,8 +1,8 @@
 ## My Web Application (URide)
 
 ##Team Members
-* Arunab Singh, added the main and list files to the project.
-* Dustin Lott, added the HelpPage.html file to the project.
+* Arunab Singh.
+* Dustin Lott.
 
 * [General info](#general-info)
 * [Technologies](#technologies)

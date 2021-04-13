@@ -164,7 +164,7 @@ function callback(response, status) {
         dura.value = response.rows[0].elements[0].duration.text;
 
         setDataPage1(orig.value, dest.value, dist.value, dura.value);
-        location.href = "listwithreviews.html";
+        location.href = "results.html";
     }
 }
 
