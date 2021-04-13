@@ -72,10 +72,10 @@ h1 {
 
 #origin-input,
 #destination-input {
-    background-color: black;
-    color: white;
-    font-family: Monoton;
-    font-size: 9pt;
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
     word-spacing: .4em;
     font-weight: 220;
     margin-left: 5%;
@@ -86,19 +86,19 @@ h1 {
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
+    color: grey;
     opacity: 1;
     /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: white;
+    color: grey;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: white;
+    color: grey;
 }
 
 #origin-input:focus,
@@ -128,24 +128,31 @@ h1 {
 
 .btn-xl {
     width: 100%;
+    height: 4rem;
     margin: 0 auto;
     padding: 10px 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    font-family: Monoton;
-    font-size: 14pt;
+    font-size: 18pt;
+    /* border-radius:0; */
+    font-family: Arial, Helvetica, sans-serif;
     word-spacing: .4em;
     font-weight: 220;
-    transform: translate(0, -20%);
-    color: #33a852;
-    border: 5px double black;
+    transform: translate(0, -40%);
+    color: white;
+    border: 5px double green;
+    background-color: green;
 }
 
 .btn-xl:hover{
-    border-color: #33a852;
-    color: #33a852;
+    background-color: #78d390;
 }
 
 a {
     display: block;
+}
+
+
+@media (max-width:600px){
+    .btn-xl{
+        font-size: 14pt;
+    }
 }

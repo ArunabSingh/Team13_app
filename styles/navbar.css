@@ -125,7 +125,7 @@ body {
     color: black;
     background-color: #33a852;
     height: 50px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     font-size: 10pt;
 }
