@@ -14,7 +14,9 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <!-- Css files linked-->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&libraries=places"> -->
+    <!-- </script> -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/formcopygreeny.css">
@@ -31,10 +33,16 @@
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
 
+    <div id="blackout">
+        <div id="box">
+          Popup window!<br>
+          <a href="#" class="close">Close window</a>
+        </div>
+      </div>
+
     <nav class="navbar">
         <div class="brand-title">BESTRIDE</div>
-        <!-- The Menu button which appears on screen sizes less than 800px-->
-        <a href="#" class="toggle-button"></a>
+        <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -65,10 +73,7 @@
 </br>
 
 
-    <!-- Display of the map-->
     <div id="map"></div>
-
-    <!--Display of the origing and detination input fields on the map-->
     <div id="elements">
         <input id="origin-input" class="controls" type="text" placeholder="Enter a pickup location:" />
         <br>
@@ -78,15 +83,14 @@
     </div>
 
     <div class="d-grid gap-2 col-6 mx-auto">
-        <!--Hidden fields for the value of distance and duration calculated on clicking "get Estimate"-->
         <input type="text" id="dist">
         <input type="text" id="dura">
         <a id="submission" class="btn btn-dark btn-xl" onclick="getEstimate()" role="button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Get
             Estimate</a>
         <br>
 
-        <!-- The mode of travel on the map-->
         <div id="mode-selector" class="controls">
+
             <input type="radio" name="type" id="changemode-driving" />
             <label for="changemode-driving">Driving</label>
         </div>
@@ -101,23 +105,21 @@
     </div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&callback=initMap&libraries=places&v=weekly" async></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&callback=initMap&libraries=places&v=weekly"
+        async></script>
 
-    <!-- JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
-    <!-- js files linked -->
-
     <script src="scripts/firebase_api_BESTRIDE.js"></script>
     <script src="scripts/auth.js"></script>
+
     <script src="scripts/navbar.js"></script>
-    <script src="scripts/formcopy.js"></script>
+    <script src="scripts/main.js"></script>
 
 </body>
 
