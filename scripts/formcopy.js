@@ -1,5 +1,9 @@
+// Get Estimate button after the map
 const submitEntry = document.querySelector("#submission");
 
+/**
+ * Displays the Map after the user enters their origin and destination location.
+ */
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         streetViewControl: false,
@@ -14,6 +18,9 @@ function initMap() {
     new AutocompleteDirectionsHandler(map);
 }
 
+/**
+ * Auto Complete when the user is entering their origin and destination location.
+ */
 class AutocompleteDirectionsHandler {
     constructor(map) {
         this.map = map;
@@ -25,7 +32,6 @@ class AutocompleteDirectionsHandler {
         this.directionsRenderer.setMap(map);
         const originInput = document.getElementById("origin-input");
         const destinationInput = document.getElementById("destination-input");
-        //const modeSelector = document.getElementById("mode-selector");
         const originAutocomplete = new google.maps.places.Autocomplete(
             originInput
         );
@@ -102,18 +108,27 @@ class AutocompleteDirectionsHandler {
     }
 }
 
+/**
+ * initializes the google maps event when the page is loaded.
+ */
 function initialize() {
     google.maps.event.addDomListener(window, "load", calculateDistance);
 }
 
+// Runs getEstimate when the "Get Estimate" buttonn is clicked
 submitEntry.addEventListener('click', getEstimate);
 
+/**
+ * Calls the calculateDistance function.
+ */
 function getEstimate() {
-    calculateDistance();
-    // storeData();
+    calculateAttributes();
 }
 
-async function calculateDistance() {
+/**
+ * calculates the Distance and Duration of the user entered ride.
+ */
+async function calculateAttributes() {
     const service = new google.maps.DistanceMatrixService();
     const origin = document.getElementById("origin-input").value;
     const destination = document.getElementById("destination-input").value;
@@ -128,6 +143,14 @@ async function calculateDistance() {
     }, callback);
 }
 
+/**
+ * Sets up the values for the variables 
+ * and then fills them with the required values
+ * and then calls saveDataPage1 function with required values
+ * and then redirects the user to next page.
+ * @param {the response of the function} response 
+ * @param {the status of the function} status 
+ */
 function callback(response, status) {
     var orig = document.getElementById("origin-input"),
         dest = document.getElementById("destination-input"),
@@ -170,23 +193,3 @@ function setDataPage1(ol, dl, di, du) {
     //save the object to local storage
     localStorage.setItem('formdata', JSON.stringify(obj));
 }
-
-/**
- * Function for storing all the origin and destinations
- * locations entered by the user into a subcollection
- * called Routes located inside each user collection.
- */
-//  function storeData() {
-//     firebase.auth().onAuthStateChanged(function (user) {
-//         db.collection("users").doc(user.uid)
-//             .collection("Routes").add({
-//                 "OriginLocation": myobj.originLoc,
-//                 "DestinationLocation": myobj.destLoc,
-//                 "Distance": myobj.totalDist,
-//                 "Duration": myobj.totalDur,
-//             }).catch((err) => {
-//                 console.log(err)
-//             })
-//     })
-// }
-// storeData();

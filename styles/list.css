@@ -24,7 +24,7 @@
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
-    height: 60vh;
+    height: 650px;
 }
 
 .background-color {
@@ -84,7 +84,7 @@
 #evo-color{
     margin: 0px;
     text-align: left;
-    background-color: palevioletred;
+    background-color: gold;
     width: 100%;
     font-size: 12px;
     padding: 0px;
@@ -93,7 +93,7 @@
 #modo-color{
     margin: 0px;
     text-align: left;
-    background-color: palevioletred;
+    background-color: plum;
     width: 100%;
     font-size: 12px;
     padding: 0px;
@@ -129,15 +129,45 @@
     font-size: 20px;
 }
 
-@media (max-width: 850px) {
+.end-button{
+    background-color: #38b48b;
+    font-size: 25px;
+}
+.end-button:hover {
+    color: white;
+    background-color: turquoise;
+}
+
+@media (max-width: 910px) {
     #list {
         display: grid;
         grid-template-columns: 100%;
         grid-gap: 10px;
     }
 
+    #full-screen-text{
+        display:none;
+    }
+
     .contain1 {
         display: flex;
         flex-direction: column;
     }
+
+    .background-image {
+        background-size: cover;
+        background-repeat: repeat-x;
+        background-position: center;
+        height: 500px;
+    }
+
+    #start, #finish {
+    padding: 10px 10px;
+    margin-left: 8px;
+    color: black;
+    border: solid 1px grey;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
 }

@@ -81,9 +81,6 @@ function markEvo(name, writing, key, star) {
                     <div class="col">
                     <h5 id="existingTitleInputEvo"> ${doc.data().title}</h5>
                     <h6 id="newDetailsInputEvo">${doc.data().content}</h6>
-
-
-
                             <i onmouseover="colorEvo('${doc.id}','0')" onclick="markEvo('${doc.data().title}','${doc.data().content}','${doc.id}','0')" onmouseleave="nocolorEvo('${doc.id}')" id='${'star'+doc.id+0}' class="fas fa-star"></i>
                             <i onmouseover="colorEvo('${doc.id}','1')" onclick="markEvo('${doc.data().title}','${doc.data().content}','${doc.id}','1')" onmouseleave="nocolorEvo('${doc.id}')" id='${'star'+doc.id+1}' class="fas fa-star"></i>
                             <i onmouseover="colorEvo('${doc.id}','2')" onclick="markEvo('${doc.data().title}','${doc.data().content}','${doc.id}','2')" onmouseleave="nocolorEvo('${doc.id}')" id='${'star'+doc.id+2}' class="fas fa-star"></i>
