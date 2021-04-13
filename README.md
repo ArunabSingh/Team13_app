@@ -16,25 +16,37 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
+* Google Maps API
+* Firebase
+* JQuery
+* Font Awesome 4.7
+
 	
 ## Content
 Content of the project folder:
 
 ```
  Top level of project folder: 
-├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── .gitignore                  # Git ignore file
+├── index.html                  # landing HTML file, this is what users see when you come to url
 └── README.md
 
 It has the following subfolders and files:
-├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
-├── scripts                  # Folder for scripts
-    /blah.js                 # 
-├── styles                   # Folder for styles
-    /blah.css                # 
+├── .git                        # Folder for git repo
+├── images                      # Folder for images
+    /blah.jpg                   # 
+├── scripts                     # Folder for scripts
+    /auth.js                    # 
+    /FAQs.js                    #
+    /firebase_api_BESTRIDE.js   #
+    /login.js                   #
+    /main.js                    #
+    /navbar.js                  #
+    /profile.js                 #
+    /results.js                 #
+    /reviews.js                 #
+├── styles                      # Folder for styles
+    /blah.css                   # 
 
 Firebase hosting files: 
 ├── .firebaserc...
