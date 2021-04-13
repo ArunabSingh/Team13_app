@@ -11,13 +11,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/navbar.css">
-  <link rel="stylesheet" href="styles/list.css">
-  <link rel="stylesheet" href="styles/listReviews.css">
+  
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
   <script src="https://kit.fontawesome.com/f9fc02e319.js" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS Files Lnked-->
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/results.css">
+  <link rel="stylesheet" href="styles/reviews.css">
 </head>
 
 <body>
@@ -75,12 +78,7 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="reenter">
-      <p>Entered Wrong Locations. Click the button below to Re-Enter</p>
-      <button onclick="goBack()">Re-Enter Locations</button>
-    </div> -->
-
+  
   <!-- Modal for Uber Reviews -->
   <div class="modal fade" id="uberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -380,11 +378,11 @@
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
   <script src="scripts/navbar.js"></script>
-  <script src="scripts/list.js"></script>
-  <script src="scripts/uberReviews.js"></script>
-  <script src="scripts/lyftReviews.js"></script>
-  <script src="scripts/evoReviews.js"></script>
-  <script src="scripts/modoReviews.js"></script>
+  <script src="scripts/results.js"></script>
+  <script src="scripts/reviews/uberReviews.js"></script>
+  <script src="scripts/reviews/lyftReviews.js"></script>
+  <script src="scripts/reviews/evoReviews.js"></script>
+  <script src="scripts/reviews/modoReviews.js"></script>
 
 </body>
 
