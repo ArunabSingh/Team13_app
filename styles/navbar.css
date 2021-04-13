@@ -123,6 +123,51 @@ body {
         display: flex;
     }
 }
+/* Resolution for extremely small devices */
+@media (max-width: 350px){
+    .brand-title {
+        font-size: 2rem;
+        margin: .3rem;
+        font-family: 'Monoton', cursive;
+        color: white;
+        letter-spacing: 3px;
+    }
+
+    .toggle-button {
+        top: 1.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
 
 #footer {
     display: flex;
