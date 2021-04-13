@@ -17,7 +17,7 @@
     <!-- Css files linked-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/formcopygreeny.css">
+    <link rel="stylesheet" href="styles/main.css">
 
 
 
@@ -81,8 +81,10 @@
         <!--Hidden fields for the value of distance and duration calculated on clicking "get Estimate"-->
         <input type="text" id="dist">
         <input type="text" id="dura">
-        <a id="submission" class="btn btn-dark btn-xl" onclick="getEstimate()" role="button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Get
-            Estimate</a>
+        <!-- The Get Estimate button that will take the user to the next page and start up the getEstimate function-->
+        <a id="submission" class="btn btn-dark btn-outline-dark btn-xl" onclick="getEstimate()" role="button" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>Get Estimate
+        </a>
         <br>
 
         <!-- The mode of travel on the map-->
@@ -117,7 +119,7 @@
     <script src="scripts/firebase_api_BESTRIDE.js"></script>
     <script src="scripts/auth.js"></script>
     <script src="scripts/navbar.js"></script>
-    <script src="scripts/formcopy.js"></script>
+    <script src="scripts/main.js"></script>
 
 </body>
 
