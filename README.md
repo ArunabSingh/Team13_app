@@ -44,9 +44,22 @@ It has the following subfolders and files:
     /navbar.js                  #
     /profile.js                 #
     /results.js                 #
-    /reviews.js                 #
+    ├── reviews                 # Subfolder for scripts specifically for reviews
+    /evoReviews.js              #
+    /lyftReviews.js             #
+    /modoReviews.js             #
+    /uberReviews.js             #
 ├── styles                      # Folder for styles
-    /blah.css                   # 
+    /aboutUs.css                # 
+    /FAQs.css                   #
+    /help.css                   #
+    /index.css                  #
+    /login.css                  #
+    /main.css                   #
+    /navbar.css                 #
+    /profile.css                #
+    /results.css                #
+    /reviews.css                #
 
 Firebase hosting files: 
 ├── .firebaserc...

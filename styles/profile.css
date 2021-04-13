@@ -1,6 +1,6 @@
 #profile {
     background-color: #e8f6e8;
-    margin: auto 10%;
+    margin: auto 0;
     font-size: 25px;
     padding: 1em;
     text-align: center;
@@ -29,7 +29,7 @@
 /* Display below 720px of width */
 @media (max-width: 720px) {
     #profile {
-        margin: auto 2%;
+        margin: auto 0;
     }
 
     #Searches {
