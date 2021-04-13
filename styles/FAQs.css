@@ -1,9 +1,12 @@
 
+/* sets up a grid layout for the subhead */
 #subHead{
     display: grid;
     grid-template-columns: 45% 65%;
     margin: 10px;
 }
+
+/* sets layout and style for FAQ title */
 #title-of-page{
     text-align: left;
     font-size: 45px;
@@ -11,18 +14,21 @@
     color: darkgreen;
 }
 
+/* sets background color of the page */
 body{
     background-color: #e8f6e8;
 }
 
+/* sets background color of the page */
 .wrapper{
     background-color: #e8f6e8;
 }
-
+/* floats the back button to the left */
 .reenter{
     text-align: left;
 }
 
+/* styles the back button */
 .reenter button{
     background-color: #e8f6e8;
     border: white;
@@ -30,44 +36,51 @@ body{
     color: green;
 }
 
+/* styles the back button when hovering */
 .reenter button:Hover{
     background-color: darkseagreen;
 }
 
-
+/* styles the questions in FAQ section */
 .FAQ-question {
     color: #33a852;
     overflow: hidden;
 }
 
+/* styles the back button to the left */
 .FAQ-container {
     width: 80%;
     margin-left: 10%;
     background-color: white;
 }
-
+/* changes outline to black when click is being held down */
 .FAQ-container:visited{
     outline: black;
 }
 
+/* layout for answers in FAQ section */
 .FAQ-answers {
     width: 80%;
     overflow: hidden;
     margin-left: 10%;
 }
 
+/* changes button to have white background when active */
 button:active{
     background-color: white;
 }
 
+/* changes button to have white background when focussed */
 button:focus{
     background-color: white;
 }
 
+/* sets background of body  */
 body{
     background-color: white;
 }
 
+/* sets background of contents */
 #contents{
     background-color: #e8f6e8;
 }

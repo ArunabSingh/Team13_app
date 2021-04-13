@@ -1,9 +1,10 @@
+/* sets body height and background color */
 body {
  height: 1000px;
  background-color: white;
 }
 
-
+/* sets layout for contents and background color */
 #contents{
   background-color: #e8f6e8;
   width: 100%;
@@ -13,13 +14,17 @@ body {
   position: relative;
 }
 
+/* centers anchor elements */
   a{
     margin: 0 auto;
   }
 
+  /* reduces opacity of buttons when hovered */
   a:hover{
+    opacity: .7;
   }
-  
+
+  /* styles the labels of the links */
   a p {
     margin-top: -5%;
     font-size: 20pt;
@@ -27,25 +32,26 @@ body {
     color: #33a852;
   }
 
-  a p:hover{
-    color: black;
-  }
-
+  /* centers and sizes images */
   #picFAQ {
     width: 520px;
     max-width: 100%;
     margin: 0 auto;
   }
 
+  /* sets layout of the div holding buttons to flex */
   .buttonDivs{
     display: flex;
   }
 
+  /* changes image width when media pixel with is > 1020px */
   @media (max-width: 1020px){
     #picFAQ {
       width: 400px;
     }
   }
+
+  /* changes image width when media pixel with is > 720px */
   @media (max-width: 720px){
     #picFAQ {
       width: 300px;

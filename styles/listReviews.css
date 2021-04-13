@@ -1,154 +1,180 @@
+    /* style the star icons, change cursor to pointer */
     .fa-star {
       font-size: 2rem;
       cursor: pointer;
       margin: 0px;
     }
 
-    .form-control{
+    /* set margin and padding of the input form elements */
+    .form-control {
       padding: 1rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
+      width: 95%;
     }
 
-    .modalContents{
+    /* sets the background, width, margins and border of the modal review popouts */
+    .modalContents {
       background-color: #e8f6e8;
       width: 1200px;
       max-width: 100%;
       margin: 0 auto;
       border: 1px solid rgba(0, 0, 0, .5);
     }
-    
-    #reviewTitle{
+
+    /* indents the title of the Uber review */
+    #reviewTitle {
       margin-left: 1rem;
     }
 
-    #reviewContent{
-      height: 10rem;
-      border: 1px solid rgba(0, 0, 0, .5);
-      margin-left: 1rem;
-    }
-    
-    #reviewTitleLyft{
-      margin-left: 1rem;
-    }
-
-    #reviewContentLyft{
-      height: 10rem;
-      border: 1px solid rgba(0, 0, 0, .5);
-      margin-left: 1rem;
-    }
-    
-    #reviewTitleEvo{
-      margin-left: 1rem;
-    }
-
-    #reviewContentEvo{
+    /* indents the content of the Uber review, and sets height and border*/
+    #reviewContent {
       height: 10rem;
       border: 1px solid rgba(0, 0, 0, .5);
       margin-left: 1rem;
     }
 
-    #reviewTitleModo{
+    /* indents the title of the Lyft review */
+    #reviewTitleLyft {
       margin-left: 1rem;
     }
 
-    #reviewContentModo{
+    /* indents the content of the Uber review, and sets height and border*/
+    #reviewContentLyft {
       height: 10rem;
       border: 1px solid rgba(0, 0, 0, .5);
       margin-left: 1rem;
     }
 
-    .reviewCompany {
+    /* indents the title of the Evo review */
+    #reviewTitleEvo {
       margin-left: 1rem;
     }
-    
+
+    /* indents the content of the Uber review, and sets height and border*/
+    #reviewContentEvo {
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
+    }
+
+    /* indents the title of the Modo review */
+    #reviewTitleModo {
+      margin-left: 1rem;
+    }
+
+    /* indents the content of the Uber review, and sets height and border*/
+    #reviewContentModo {
+      height: 10rem;
+      border: 1px solid rgba(0, 0, 0, .5);
+      margin-left: 1rem;
+    }
+
+    /* indents the title of the Modo review */
     .createReviewLabel {
       margin-left: 1rem;
     }
 
+    /* indents the add review button */
     .addReviewButton {
       margin-left: 1rem;
-      
-    }
-    .addReviewButton:hover{
-      color:  #33a852;
+
+      /* changes color of the add review button */
     }
 
-    #divRender{
-      margin-left: 1rem;
+    .addReviewButton:hover {
+      color: #33a852;
     }
-    
-    #divRenderLyft{
-      margin-left: 1rem;
-    }
-    
-    #divRenderEvo{
+
+    /* indents the new Uber reviews */
+    #divRender {
       margin-left: 1rem;
     }
 
-    #divRenderModo{
+    /* indents the new Lyft reviews */
+    #divRenderLyft {
       margin-left: 1rem;
     }
 
-    .form-control{
-      width: 95%;
+    /* indents the new Evo reviews */
+    #divRenderEvo {
+      margin-left: 1rem;
     }
 
-    .spacer{
+    /* indents the new Modo reviews */
+    #divRenderModo {
+      margin-left: 1rem;
+    }
+
+    /* styles the spacer */
+    .spacer {
       background-color: #33a852;
       opacity: .7;
       height: 1px;
       margin-left: 1rem;
     }
 
+    /* indents the existing Uber reviews */
     #existingDetailsInput {
       margin: 1rem 0 1rem 1rem;
     }
 
-    #existingDetailsInput + div {
+    /* indents the existing Uber reviews */
+    #existingDetailsInput+div {
       margin-left: 1rem;
     }
 
+    /* indents the new Uber reviews content */
     #newDetailsInput {
       margin: 1rem 0 1rem 1rem;
     }
-    
+
+    /* indents the existing Lyft reviews */
     #existingDetailsInputLyft {
       margin: 1rem 0 1rem 1rem;
     }
 
-    #existingDetailsInputLyft + div {
+    /* indents the existing Lyft reviews */
+    #existingDetailsInputLyft+div {
       margin-left: 1rem;
     }
 
+    /* indents the new Lyft reviews content*/
     #newDetailsInputLyft {
       margin: 1rem 0 1rem 1rem;
     }
 
+    /* indents the existing Evo reviews */
     #existingDetailsInputEvo {
       margin: 1rem 0 1rem 1rem;
     }
 
-    #existingDetailsInputEvo + div {
+    /* indents the existing Evo reviews */
+    #existingDetailsInputEvo+div {
       margin-left: 1rem;
     }
 
+    /* indents the new Evo reviews contents */
     #newDetailsInputEvo {
       margin: 1rem 0 1rem 1rem;
     }
 
+    /* indents the existing Modo reviews */
     #existingDetailsInputModo {
       margin: 1rem 0 1rem 1rem;
     }
 
-    #existingDetailsInputModo + div {
+    /* indents the existing Modo reviews */
+    #existingDetailsInputModo+div {
       margin-left: 1rem;
     }
 
+    /* indents the new Modo reviews content*/
     #newDetailsInputModo {
       margin: 1rem 0 1rem 1rem;
     }
 
+    /* indents the new star icons */
     .fas fa-star {
       margin-left: 1rem;
     }
