@@ -23,9 +23,11 @@ body {
 }
 
 .brand-title {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin: .5rem;
     font-family: 'Monoton', cursive;
+    color: white;
+    letter-spacing: 4px;
 }
 
 .navbar-links {
@@ -38,6 +40,12 @@ body {
     padding: 0;
 }
 
+#btnLogout:hover{
+    background-image: linear-gradient(rgba(25, 102, 38, 0.986), #33a852);
+    border-radius: 0px 0px 15px 15px;
+    border: 0px double rgb(0, 0, 0, .2);
+    cursor: pointer;
+}
 .navbar-links li {
     font-size: 1rem;
     list-style: none;
@@ -56,8 +64,9 @@ body {
 
 .navbar-links li:hover {
     background-image: linear-gradient(rgba(25, 102, 38, 0.986), #33a852);
-    border-radius: 0px 0px 22px 22px;
+    border-radius: 0px 0px 15px 15px;
     border: 0px double rgb(0, 0, 0, .2);
+    cursor: pointer;
 }
 
 .toggle-button {

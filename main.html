@@ -60,10 +60,10 @@
                         class="navbar-active" href="login.html">LOGIN</a></li>
                 <li style="display:none;" class="logged-in"><i class="fa fa-sign-in" aria-hidden="true"></i><a
                         class="navbar-active">LOGGED IN AS <span id="username"></span></a></li>
-                <li style="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
+                <li clastyle="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
                         class="navbar-active" href="login.html">SIGNUP</a>
                 </li>
-                <li id="btnLogout" style="display:none;" class="logged-in" id="btnLogout"><i class="fa fa-sign-out"
+                <li id="btnLogout" style="display:none;" class="logged-in"><i class="fa fa-sign-out"
                         aria-hidden="true"></i><a class="navbar-active">LOGOUT</a>
                 </li>
             </ul>
@@ -85,8 +85,10 @@
     <div class="d-grid gap-2 col-6 mx-auto">
         <input type="text" id="dist">
         <input type="text" id="dura">
-        <a id="submission" class="btn btn-dark btn-xl" onclick="getEstimate()" role="button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>Get
-            Estimate</a>
+        <!-- The Get Estimate button that will take the user to the next page and start up the getEstimate function-->
+        <a id="submission" class="btn btn-dark btn-outline-dark btn-xl" onclick="getEstimate()" role="button" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>Get Estimate
+        </a>
         <br>
 
         <div id="mode-selector" class="controls">
