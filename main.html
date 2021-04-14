@@ -2,28 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <meta charset="utf-8">
+    <title>BestRide App Team 13</title>
+    <meta name="comp1800 boilerplate code" content="COMP 1800 Team 13 project">
+    <meta name="author" content="BCIT">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap for Mobile-first, and JQuery -->
-
+    <!-- Bootstrap 5 link for CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+    <!-- Google APIs polyfill link-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&libraries=places"> -->
-    <!-- </script> -->
-
+    <!-- Font Awsome 4.7 link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS Files Linked-->
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/main.css">
-
-
-
-    <!-- Optional styles and scripts of your own -->
 
 </head>
 
@@ -31,49 +28,58 @@
     <!-------------------------------------->
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
+
     <!-- Header Navigation Bar -->
-
-    <div id="blackout">
-        <div id="box">
-          Popup window!<br>
-          <a href="#" class="close">Close window</a>
-        </div>
-      </div>
-
     <nav class="navbar">
-        <div class="brand-title">BESTRIDE</div>
+        <a class="brand-title" href="main.html">BESTRIDE</a>
+        <!-- Toggle Button which appears on resolution less than 880px -->
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
         <div class="navbar-links">
+            <!-- Different Links to navigate through the app-->
             <ul>
-                <li style="display:none;" class="logged-in"><span><i class="fa fa-user" aria-hidden="true"></i></span><a
-                        class="" href="/profile.html">USER PROFILE</a></li>
-                <li style="display:none;" class="logged-in"><i class="fa fa-bar-chart" aria-hidden="true"></i><a
-                        class="" href="formcopy2.html">COMPARE PRICES</a></li>
-                <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active"
-                        href="help.html">HELP</a>
+                <li style="display:none;" class="logged-in">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <a class="navbar-active" href="profile.html">USER PROFILE</a>
                 </li>
-                <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-                        class="navbar-active" href="login.html">LOGIN</a></li>
-                <li style="display:none;" class="logged-in"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-                        class="navbar-active">LOGGED IN AS <span id="username"></span></a></li>
-                <li clastyle="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
-                        class="navbar-active" href="login.html">SIGNUP</a>
+                <li style="display:none;" class="logged-in">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <a class="navbar-active" href="main.html">COMPARE PRICES</a>
                 </li>
-                <li id="btnLogout" style="display:none;" class="logged-in"><i class="fa fa-sign-out"
-                        aria-hidden="true"></i><a class="navbar-active">LOGOUT</a>
+                <li>
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <a class="navbar-active" href="help.html">HELP</a>
+                </li>
+                <li style="display:none;" class="logged-out">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <a class="navbar-active" href="login.html">LOGIN</a>
+                </li>
+                <li style="display:none;" class="logged-in">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <a class="navbar-active">LOGGED IN AS <span id="username"></span></a>
+                </li>
+                <li style="display:none;" class="logged-out">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    <a class="navbar-active" href="login.html">SIGNUP</a>
+                </li>
+                <li style="display:none;" id="btnLogout" class="logged-in">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <a class="navbar-active" href="">LOGOUT</a>
                 </li>
             </ul>
         </div>
     </nav>
-</br>
-</br>
+    </br>
+    </br>
 
 
+    <!-- Map Display space-->
     <div id="map"></div>
+
+    <!-- Origin and Destination Inputs-->
     <div id="elements">
         <input id="origin-input" class="controls" type="text" placeholder="Enter a pickup location:" />
         <br>
@@ -82,17 +88,19 @@
         <br>
     </div>
 
+    <!-- distance and duration calculated input values-->
     <div class="d-grid gap-2 col-6 mx-auto">
         <input type="text" id="dist">
         <input type="text" id="dura">
         <!-- The Get Estimate button that will take the user to the next page and start up the getEstimate function-->
-        <a id="submission" class="btn btn-dark btn-outline-dark btn-xl" onclick="getEstimate()" role="button" type="submit">
+        <a id="submission" class="btn btn-dark btn-outline-dark btn-xl" onclick="getEstimate()" role="button"
+            type="submit">
             <i class="fa fa-search" aria-hidden="true"></i>Get Estimate
         </a>
         <br>
 
+        <!-- The driving mode displayed on the map -->
         <div id="mode-selector" class="controls">
-
             <input type="radio" name="type" id="changemode-driving" />
             <label for="changemode-driving">Driving</label>
         </div>
@@ -106,20 +114,23 @@
         <p>2021 BESTRIDE INC. &copy; Copyright Team 13. All right reserved.</p>
     </div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- Google APIs key link. -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9T3sZdGiRglZCOTU0fyxhZD02HrnnOUw&callback=initMap&libraries=places&v=weekly"
         async></script>
 
+    <!-- jQuery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Firebase links -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
+    <!-- JS files linked-->
     <script src="scripts/firebase_api_BESTRIDE.js"></script>
     <script src="scripts/auth.js"></script>
-
     <script src="scripts/navbar.js"></script>
     <script src="scripts/main.js"></script>
 

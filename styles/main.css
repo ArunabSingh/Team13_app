@@ -133,11 +133,9 @@ h1 {
     margin: 0 auto;
     padding: 10px 10px;
     font-size: 25pt;
-    /* border-radius:0; */
     font-family: Roboto;
-    font-weight: bold;
     word-spacing: .4em;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     transform: translate(0, -40%);
     color: white;
@@ -154,16 +152,18 @@ a {
 }
 
 
-@media (max-width:620px){
+@media (max-width:720px){
     .btn-xl{
         font-size: 20pt;
-        font-weight: 100;
+        font-weight: 400;
+        width: fit-content;
     }
 }
 
-@media (max-width:520){
+@media (max-width:520px){
     .btn-xl{
         font-size: 12pt;
         font-weight: 100;
+        width: fit-content;
     }
 }

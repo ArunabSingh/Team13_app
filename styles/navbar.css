@@ -28,6 +28,7 @@ body {
     font-family: 'Monoton', cursive;
     color: white;
     letter-spacing: 4px;
+    text-decoration: none;
 }
 
 .navbar-links {
@@ -47,7 +48,7 @@ body {
     cursor: pointer;
 }
 .navbar-links li {
-    font-size: 1rem;
+    font-size: 1.25rem;
     list-style: none;
     margin: 1vw;
 }
@@ -91,7 +92,7 @@ body {
     border: 4px double rgb(0, 0, 0, .2);
 }
 
-@media (max-width: 850px) {
+@media (max-width: 880px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;

@@ -3,22 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <title>BestRide App Team 13</title>
   <meta name="comp1800 boilerplate code" content="COMP 1800 Team 13 project">
   <meta name="author" content="BCIT">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Profile Page</title>
-
-  <!-- Bootstrap for Mobile-first, and JQuery -->
-
+  <!-- Bootstrap 5 link for CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- Font Awsome 4.7 link for CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!-- CSS Files Linked-->
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/profile.css">
-
-
 </head>
 
 <body>
@@ -27,46 +26,60 @@
   <!-- The following is HTML for layout -->
   <!-------------------------------------->
   <!-- Header Navigation Bar -->
-
   <nav class="navbar">
-    <div class="brand-title">BESTRIDE</div>
+    <a class="brand-title" href="main.html">BESTRIDE</a>
+    <!-- Toggle Button which appears on resolution less than 880px -->
     <a href="#" class="toggle-button">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </a>
     <div class="navbar-links">
+      <!-- Different Links to navigate through the app-->
       <ul>
-        <li style="display:none;" class="logged-in"><span><i class="fa fa-user" aria-hidden="true"></i></span><a
-            class="" href="profile.html">USER
-            PROFILE</a></li>
-        <li style="display:none;" class="logged-in"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""
-            href="main.html">COMPARE
-            PRICES</a></li>
-        <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
+        <li style="display:none;" class="logged-in">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <a class="navbar-active" href="profile.html">USER PROFILE</a>
         </li>
-        <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-            class="navbar-active" href="login.html">LOGIN</a></li>
-        <li style="display:none;" class="logged-in"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-            class="navbar-active">LOGGED IN AS <span id="username"></span></a></li>
-        <li style="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
-            class="navbar-active" href="login.html">SIGNUP</a>
+        <li style="display:none;" class="logged-in">
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
+          <a class="navbar-active" href="main.html">COMPARE PRICES</a>
         </li>
-        <li id="btnLogout" style="display:none;" class="logged-in"><i class="fa fa-sign-out" aria-hidden="true"></i><a
-            class="navbar-active" href="">LOGOUT</a>
+        <li>
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+          <a class="navbar-active" href="help.html">HELP</a>
+        </li>
+        <li style="display:none;" class="logged-out">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          <a class="navbar-active" href="login.html">LOGIN</a>
+        </li>
+        <li style="display:none;" class="logged-in">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          <a class="navbar-active">LOGGED IN AS <span id="username"></span></a>
+        </li>
+        <li style="display:none;" class="logged-out">
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+          <a class="navbar-active" href="login.html">SIGNUP</a>
+        </li>
+        <li style="display:none;" id="btnLogout" class="logged-in">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <a class="navbar-active" href="">LOGOUT</a>
         </li>
       </ul>
     </div>
   </nav>
-  
-  <div id = "profile">
-      <div id = "name">Name: <span id="userName"></span></div>
-      <div id = "email">Email: <span id="userEmail"></span></div><br>
-      <span id = "previous">Previous Searches</span>
-      <div id="Searches"></div>
+
+  <!-- Profile Page Content-->
+
+  <!-- Display of user's personal information and searches made-->
+  <div id="profile">
+    <div id="name">Name: <span id="userName"></span></div>
+    <div id="email">Email: <span id="userEmail"></span></div><br>
+    <span id="previous">Previous Searches</span>
+    <div id="Searches"></div>
   </div>
 
-
+  <!-- Footer Code -->
   <div id="footer">
     <p>2021 BESTRIDE INC. &copy; Copyright Team 13. All right reserved.</p>
   </div> -->
@@ -75,23 +88,23 @@
   <!-- JS: Boostrap, Firebase, API related    -->
   <!----------------------------------------------->
 
+  <!-- Bootstrap javascript link.-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
 
+  <!-- jQuery link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Firebase links -->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
+  <!-- JS files linked-->
   <script src="scripts/firebase_api_BESTRIDE.js"></script>
   <script src="scripts/auth.js"></script>
-
-  <!--------------------------------------------------------------------->
-  <!-- JS files: Your own JavaScript functions included here    -->
-  <!--------------------------------------------------------------------->
-
   <script src="scripts/navbar.js"></script>
   <script src="scripts/profile.js"></script>
 
