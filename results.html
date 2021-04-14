@@ -2,23 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Results Page</title>
-
-  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta charset="utf-8">
+  <title>BestRide App Team 13</title>
+  <meta name="comp1800 boilerplate code" content="COMP 1800 Team 13 project">
+  <meta name="author" content="BCIT">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap 5 link for CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/navbar.css">
-  <link rel="stylesheet" href="styles/results.css">
-  <link rel="stylesheet" href="styles/reviews.css">
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
-  <script src="https://kit.fontawesome.com/f9fc02e319.js" crossorigin="anonymous"></script>
 
+  <!-- Font Awsome 4.7 link for CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Firebase CSS Link-->
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
   <!-- CSS Files Lnked-->
   <link rel="stylesheet" href="styles/navbar.css">
@@ -27,61 +25,72 @@
 </head>
 
 <body>
-
   <!-------------------------------------->
   <!-- The following is HTML for layout -->
   <!-------------------------------------->
-  <!-- Header Navigation Bar -->
 
-  <nav class="navbar">
-    <div class="brand-title">BESTRIDE</div>
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-links">
-      <ul>
-        <li style="display:none;" class="logged-in"><span><i class="fa fa-user" aria-hidden="true"></i></span><a
-            class="" href="profile.html">USER
-            PROFILE</a></li>
-        <li style="display:none;" class="logged-in"><i class="fa fa-bar-chart" aria-hidden="true"></i><a class=""
-            href="main.html">COMPARE
-            PRICES</a></li>
-        <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
-        </li>
-        <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-            class="navbar-active" href="login.html">LOGIN</a></li>
-        <li style="display:none;" class="logged-in"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-            class="navbar-active">LOGGED IN AS <span id="username"></span></a></li>
-        <li style="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
-            class="navbar-active" href="login.html">SIGNUP</a>
-        </li>
-        <li id="btnLogout" style="display:none;" class="logged-in"><i class="fa fa-sign-out" aria-hidden="true"></i><a
-            class="navbar-active">LOGOUT</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+ <!-- Header Navigation Bar -->
+ <nav class="navbar">
+  <a class="brand-title" href="main.html">BESTRIDE</a>
+  <!-- Toggle Button which appears on resolution less than 880px -->
+  <a href="#" class="toggle-button">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <!-- Different Links to navigate through the app-->
+    <ul>
+      <li style="display:none;" class="logged-in">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <a class="navbar-active" href="profile.html">USER PROFILE</a>
+      </li>
+      <li style="display:none;" class="logged-in">
+        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+        <a class="navbar-active" href="main.html">COMPARE PRICES</a>
+      </li>
+      <li>
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+        <a class="navbar-active" href="help.html">HELP</a>
+      </li>
+      <li style="display:none;" class="logged-out">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        <a class="navbar-active" href="login.html">LOGIN</a>
+      </li>
+      <li style="display:none;" class="logged-in">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+        <a class="navbar-active">LOGGED IN AS <span id="username"></span></a>
+      </li>
+      <li style="display:none;" class="logged-out">
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+        <a class="navbar-active" href="login.html">SIGNUP</a>
+      </li>
+      <li style="display:none;" id="btnLogout" class="logged-in">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+        <a class="navbar-active" href="">LOGOUT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Code for Displaying Previously Entered input -->
   <div class="background-image">
     <div class="background-color">
       <div class="contain1">
-        <!-- <div class="enter"> -->
-          <div class="reenter">
-            <button onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i><span id = "full-screen-text">Re-Enter Locations</span></button>
-          </div><br>
-          <p>From: <span id="start"></span></p><br>
-          <p>To: <span id="finish">BCIT</span></p><br>
-          <p>Distance: <span id="totalDistance"></span></p>
-          <p>Duration: <span id="totalDuration"></span></p>
+        <!-- The back button -->
+        <div class="reenter">
+          <button onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i><span
+              id="full-screen-text">Re-Enter Locations</span></button>
+        </div><br>
+        <p>From: <span id="start"></span></p><br>
+        <p>To: <span id="finish">BCIT</span></p><br>
+        <p>Distance: <span id="totalDistance"></span></p>
+        <p>Duration: <span id="totalDuration"></span></p>
         <!-- </div> -->
       </div>
     </div>
   </div>
-  
+
   <!-- Modal for Uber Reviews -->
   <div class="modal fade" id="uberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -284,24 +293,17 @@
                       <textarea class="form-control" id="reviewContentModo" placeholder="Enter details" rows="4"
                         cols="70" required></textarea>
                     </div>
-
-
                     <button type="button" onclick="addModoReview()"
                       class="btn btn-outline-dark btn-xl addReviewButton">Submit then Give Rating</button>
                   </form>
                 </div>
-
               </div>
               <br>
               <br>
               <div class="spacer"></div>
               <br>
               <br>
-
-
               <div id="divRenderModo">
-
-
               </div>
             </div>
             <br>
@@ -319,40 +321,40 @@
     </div>
   </div>
 
-  <!-- Code for the main Contents of the page -->
+  <!-- Code for displaying the different car riding companies and their prices -->
   <div class="contain2">
     <div id="list">
       <div class="listOpt comp1">
-        <div id = "uber-color">UBER</div>
+        <div id="uber-color">UBER</div>
         <p><img id="compImg1" src=""><br><span id="compName1"><span><br></p>
         <p id="type1"></p>
         <p>Price: $<span id="uberPrice"></span></p>
-        <div class = "end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#uberModal"> Reviews </a>
-          <a href="https://www.uber.com/ca/en/"><button class = "end-button">Get App</button></a></div>
+        <div class="end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#uberModal"> Reviews </a>
+          <a href="https://www.uber.com/ca/en/"><button class="end-button">Get App</button></a></div>
       </div>
       <div class="listOpt comp2">
-        <div id = "lyft-color">LYFT</div>
+        <div id="lyft-color">LYFT</div>
         <p><img id="compImg2" src=""><br><span id="compName2"><span><br></p>
         <p id="type2"></p>
         <p>Price: $<span id="lyftPrice"></span></p>
-        <div class = "end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#lyftModal"> Reviews </a>
-          <a href="https://www.lyft.com/"><button class = "end-button">Get App</button></a></div>
+        <div class="end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#lyftModal"> Reviews </a>
+          <a href="https://www.lyft.com/"><button class="end-button">Get App</button></a></div>
       </div>
       <div class="listOpt comp3">
-        <div id = "evo-color">EVO</div>
+        <div id="evo-color">EVO</div>
         <p><img id="compImg3" src=""><br><span id="compName3"><span><br></p>
         <p id="type3"></p>
         <p>Price: $<span id="evoPrice"></span></p>
-        <div class = "end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#evoModal"> Reviews </a>
-          <a href="https://evo.ca/"><button class = "end-button">Get App</button></a></div>
+        <div class="end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#evoModal"> Reviews </a>
+          <a href="https://evo.ca/"><button class="end-button">Get App</button></a></div>
       </div>
       <div class="listOpt comp4">
-        <div id = "modo-color">MODO</div>
+        <div id="modo-color">MODO</div>
         <p><img id="compImg4" src=""><br><span id="compName4"><span><br></p>
         <p id="type4"></p>
         <p>Price: $<span id="modoPrice"></p>
-        <div class = "end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#modoModal"> Reviews </a>
-          <a href="https://www.modo.com"><button class = "end-button" >Get App</button></a></div>
+        <div class="end-links"><a href="#" data-bs-toggle="modal" data-bs-target="#modoModal"> Reviews </a>
+          <a href="https://www.modo.com"><button class="end-button">Get App</button></a></div>
       </div>
     </div>
   </div>
@@ -365,21 +367,28 @@
   <!----------------------------------------------->
   <!-- JS: Boostrap, Firebase, API related    -->
   <!----------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Bootstrap javascript link.-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
 
+  <!-- jQuery link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Firebase links -->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
+
+  <!-- Font Awsome Javascipt file linked-->
+  <script src="https://kit.fontawesome.com/f9fc02e319.js" crossorigin="anonymous"></script>
+
+  <!-- JS files linked-->
   <script src="scripts/firebase_api_BESTRIDE.js"></script>
   <script src="scripts/auth.js"></script>
-  <!--------------------------------------------------------------------->
-  <!-- JS files: Your own JavaScript functions included here    -->
-  <!--------------------------------------------------------------------->
   <script src="scripts/navbar.js"></script>
   <script src="scripts/results.js"></script>
   <script src="scripts/reviews/uberReviews.js"></script>

@@ -3,59 +3,68 @@
 
 <head>
   <meta charset="utf-8">
-  <title>About Us Page</title>
-  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <title>BestRide App Team 13</title>
+  <meta name="comp1800 boilerplate code" content="COMP 1800 Team 13 project">
   <meta name="author" content="BCIT">
-
-  <!-- Bootstrap for Mobile-first, and JQuery -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap 5 link for CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/navbar.css">
 
-  <!-- Optional styles and scripts of your own -->
+  <!-- Font Awsome 4.7 link for CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS Files Linked -->
+  <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/aboutUs.css">
 
-  <style>
-    #dustinPP {
-      width: 10%;
-      border-radius: 100%;
-      border: 3px solid black;
-    }
-  </style>
 </head>
 
 <body>
   <!-------------------------------------->
   <!-- The following is HTML for layout -->
   <!-------------------------------------->
-  <!-- Header Navigation Bar -->
 
+  <!-- Header Navigation Bar -->
   <nav class="navbar">
-    <div class="brand-title">BESTRIDE</div>
+    <a class="brand-title" href="index.html">BESTRIDE</a>
+    <!-- Toggle Button which appears on resolution less than 880px -->
     <a href="#" class="toggle-button">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </a>
     <div class="navbar-links">
+      <!-- Different Links to navigate through the app-->
       <ul>
-        <li style="display:none;" class="logged-in"><i class="fa fa-user" aria-hidden="true"></i><a
-            href="profile.html">USER PROFILE</a></li>
-        <li style="display:none;" class="logged-in"><i class="fa fa-bar-chart" aria-hidden="true"></i><a
-            href="main.html">COMPARE PRICES</a></li>
-        <li><i class="fa fa-question-circle" aria-hidden="true"></i><a class="navbar-active" href="help.html">HELP</a>
+        <li style="display:none;" class="logged-in">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <a class="navbar-active" href="profile.html">USER PROFILE</a>
         </li>
-        <li style="display:none;" class="logged-out"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-            class="navbar-active" href="login.html">LOGIN</a></li>
-        <li style="display:none;" class="logged-in"><i class="fa fa-sign-in" aria-hidden="true"></i><a
-            class="navbar-active">LOGGED IN AS<span id="username"></span></a></li>
-        <li style="display:none;" class="logged-out"><i class="fa fa-user-plus" aria-hidden="true"></i><a
-            class="navbar-active" href="login.html">SIGNUP</a>
+        <li style="display:none;" class="logged-in">
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
+          <a class="navbar-active" href="main.html">COMPARE PRICES</a>
         </li>
-        <li id="btnLogout" style="display:none;" class="logged-in"><i class="fa fa-sign-out" aria-hidden="true"></i><a
-            class="navbar-active" href="">LOGOUT</a>
+        <li>
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+          <a class="navbar-active" href="help.html">HELP</a>
+        </li>
+        <li style="display:none;" class="logged-out">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          <a class="navbar-active" href="login.html">LOGIN</a>
+        </li>
+        <li style="display:none;" class="logged-in">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          <a class="navbar-active">LOGGED IN AS <span id="username"></span></a>
+        </li>
+        <li style="display:none;" class="logged-out">
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+          <a class="navbar-active" href="login.html">SIGNUP</a>
+        </li>
+        <li style="display:none;" id="btnLogout" class="logged-in">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <a class="navbar-active" href="">LOGOUT</a>
         </li>
       </ul>
     </div>
@@ -63,62 +72,74 @@
 
   <!-- HelpPage starts here -->
 
+  <!--Header tage to create space-->
   <header>
     <h1></h1>
   </header>
+
+  <!--Main content on the page-->
   <div id="mainContent">
-  <div id="mission">
-    <h2>Our Mission..</h2>
-    <p>"At BESTRIDE we strive to enhance the lives of our customers, and provide them with the best RideShare experience
-      possible. We believe in the positive environmental impact that RideShares can have, and are proud to be involved
-      in making this planet a better place for the next generations."
-    </p>
-  </div>
-  <div id="concerns">
-    <h2>Safety Concerns</h2>
-    <p>During these unprecendented we know that the number one priority is safety. Safety for our customers, and also
-      the drivers of the companies that we compare. We ask that everyone follows the local guidelines set in place by
-      the local health authority. Thank you for looking out for your fellow humans.</p>
-  </div>
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <h2 id="team">Our Team</h2>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
-        <div class="col teamMember">
-          <div class="card shadow-sm">
-            <img class="profile-pictures" src="images/dustinpp.jpg" alt="Dustin Lott Profile Picture">
-            <div class="card-body">
-              <h1 id="title1" class="card-text">Dustin Jott</h1>
-              <p id="desc1" class="card-text">Dustin is a co-founder and senior developer here at BESTRIDE. A recent BCIT recruit, he is a
-                warm positive young man who brings many intangibles to the team. In his spare time he enjoys comedy, art, and technology.  We are glad to have him helping steer our company in the best direction.</p>
+    <!--Mission Content-->
+    <div id="mission">
+      <h2>Our Mission..</h2>
+      <p>"At BESTRIDE we strive to enhance the lives of our customers, and provide them with the best RideShare
+        experience
+        possible. We believe in the positive environmental impact that RideShares can have, and are proud to be involved
+        in making this planet a better place for the next generations."
+      </p>
+    </div>
+    <!--Concerns Content-->
+    <div id="concerns">
+      <h2>Safety Concerns</h2>
+      <p>During these unprecendented we know that the number one priority is safety. Safety for our customers, and also
+        the drivers of the companies that we compare. We ask that everyone follows the local guidelines set in place by
+        the local health authority. Thank you for looking out for your fellow humans.</p>
+    </div>
+
+    <!-- Bootstrap Containers to display information about BESTRIDE's developers-->
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <h2 id="team">Our Team</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+          <div class="col teamMember">
+            <div class="card shadow-sm">
+              <img class="profile-pictures" src="images/dustinpp.jpg" alt="Dustin Lott Profile Picture">
+              <div class="card-body">
+                <h1 id="title1" class="card-text">Dustin Jott</h1>
+                <p id="desc1" class="card-text">Dustin is a co-founder and senior developer here at BESTRIDE. A recent
+                  BCIT recruit, he is a
+                  warm positive young man who brings many intangibles to the team. In his spare time he enjoys comedy,
+                  art, and technology. We are glad to have him helping steer our company in the best direction.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col teamMember">
-          <div class="card shadow-sm">
-            <img class="profile-pictures" src="images/Arunabpp.JPG" alt="Arunab Singh Profile Picture">
-            <div class="card-body">
-              <h1 id="title2" class="card-text">Arunab Singh</h1>
-              <p id="desc2" class="card-text">Arunab is a co-founder and senior developer here at BESTRIDE. He is a
-                bright driven young man who brings knowledge, energy and hardwork to the team. We are glad to have him helping steer our company in the best direction.</p>
+          <div class="col teamMember">
+            <div class="card shadow-sm">
+              <img class="profile-pictures" src="images/Arunabpp.JPG" alt="Arunab Singh Profile Picture">
+              <div class="card-body">
+                <h1 id="title2" class="card-text">Arunab Singh</h1>
+                <p id="desc2" class="card-text">Arunab is a co-founder and senior developer here at BESTRIDE. He is a
+                  bright driven young man who brings knowledge, energy and hardwork to the team. We are glad to have him
+                  helping steer our company in the best direction.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="contact">
-  <h2 id="contactTitle">Contact us</h2>
-  <div id="contactinfo">
-    <p><i>Email Address:</i> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp customerservice@bestride.ca</p>
-    <p><i>Telephone Number:</i> &nbsp &nbsp (604)-547-8357</i></p>
-    <p><i>Fax Number:</i> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (604)-548-8357</p>
-    <p><i>Mailing address:</i> &nbsp &nbsp &nbsp &nbsp &nbsp 8357 Best St, V8J2K9, Vancouver, BC, Canada</p>
+    <!--Contact Information four our app-->
+    <div id="contact">
+      <h2 id="contactTitle">Contact us</h2>
+      <div id="contactinfo">
+        <p><i>Email Address:</i> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp customerservice@bestride.ca</p>
+        <p><i>Telephone Number:</i> &nbsp &nbsp (604)-547-8357</i></p>
+        <p><i>Fax Number:</i> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp (604)-548-8357</p>
+        <p><i>Mailing address:</i> &nbsp &nbsp &nbsp &nbsp &nbsp 8357 Best St, V8J2K9, Vancouver, BC, Canada</p>
+      </div>
+    </div>
+    </br></br>
   </div>
-</div>
-</br></br>
-</div>
 
 
   <!-- Footer Code -->
@@ -129,22 +150,24 @@
   <!----------------------------------------------->
   <!-- JS: Boostrap, Firebase, API related    -->
   <!----------------------------------------------->
+
+  <!-- Bootstrap javascript link.-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
 
+  <!-- jQuery link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Firebase links -->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
+  <!-- JS files linked-->
   <script src="scripts/firebase_api_BESTRIDE.js"></script>
   <script src="scripts/auth.js"></script>
-
-  <!--------------------------------------------------------------------->
-  <!-- JS files: Your own JavaScript functions included here    -->
-  <!--------------------------------------------------------------------->
   <script src="scripts/navbar.js"></script>
 
 
