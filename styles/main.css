@@ -82,6 +82,7 @@ h1 {
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
     width: 90%;
+    border: 3px solid rgb(206, 206, 206);
 }
 
 ::placeholder {
@@ -128,7 +129,7 @@ h1 {
 
 .btn-xl {
     width: 100%;
-    height: 4.5rem;
+    height: 5rem;
     margin: 0 auto;
     padding: 10px 10px;
     font-size: 25pt;
@@ -136,7 +137,8 @@ h1 {
     font-family: Roboto;
     font-weight: bold;
     word-spacing: .4em;
-    font-weight: 220;
+    font-weight: 600;
+    letter-spacing: 1px;
     transform: translate(0, -40%);
     color: white;
     border: 5px double green;
@@ -152,14 +154,16 @@ a {
 }
 
 
-@media (max-width:600px){
+@media (max-width:620px){
     .btn-xl{
         font-size: 20pt;
+        font-weight: 100;
     }
 }
 
-@media (max-width:450px){
+@media (max-width:520){
     .btn-xl{
-        font-size: 14pt;
+        font-size: 12pt;
+        font-weight: 100;
     }
 }
