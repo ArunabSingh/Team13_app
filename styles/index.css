@@ -18,7 +18,7 @@
  }
 
  /* sets height of banner */
- .banner{
+ .banner {
      height: 10vh;
  }
 
@@ -27,35 +27,39 @@
      margin: 0px;
  }
 
-/* centers paragraph and sets letter style */
+ /* centers paragraph and sets letter style */
  #para {
      text-align: center;
      padding-top: 8.5px;
      font-size: 20pt;
      line-height: 1.7;
  }
-/* sets margins and font size */
+
+ /* sets margins and font size */
  #p1 {
      font-size: 8vh;
      margin: 5vh auto;
  }
-/* sets margins and font size */
+
+ /* sets margins and font size */
  #p2 {
      font-size: 5vh;
      margin: 3vh auto;
  }
-/* sets margins and font size */
+
+ /* sets margins and font size */
  #p3 {
      font-size: 5vh;
-    margin: 2vh auto;
+     margin: 2vh auto;
  }
-/* styles button.  sets cursor to pointer. */
+
+ /* styles button.  sets cursor to pointer. */
  .button1 {
      padding: 2vh;
      background-color: #38b48b;
      cursor: pointer;
      font-size: 5vh;
-     height: 8vh ;
+     height: 8vh;
 
  }
 
@@ -90,61 +94,61 @@
  }
 
  /* mediaquery for when max width is 1020px */
- @media (max-width: 1020px){
+ @media (max-width: 1020px) {
 
-    /* reduces font size and margin */
-    #para {
-        text-align: center;
-        padding-top: 6px;
-        font-size: 16pt;
-        line-height: 1.5;
-    }
-   
-    /* reduces font size and margin */
-    #p1 {
-        font-size: 6vh;
-        margin: 4vh auto;
-    }
-   
-    /* reduces font size and margin */
-    #p2 {
-        font-size: 3vh;
-        margin: 2vh auto;
-    }
-   
-    /* reduces font size and margin */
-    #p3 {
-        font-size: 4vh;
-       margin: 2vh auto;
-    }
+     /* reduces font size and margin */
+     #para {
+         text-align: center;
+         padding-top: 6px;
+         font-size: 16pt;
+         line-height: 1.5;
+     }
+
+     /* reduces font size and margin */
+     #p1 {
+         font-size: 6vh;
+         margin: 4vh auto;
+     }
+
+     /* reduces font size and margin */
+     #p2 {
+         font-size: 3vh;
+         margin: 2vh auto;
+     }
+
+     /* reduces font size and margin */
+     #p3 {
+         font-size: 4vh;
+         margin: 2vh auto;
+     }
  }
 
-  /* mediaquery for when max width is 460px */
- @media (max-width: 460px){
+ /* mediaquery for when max width is 460px */
+ @media (max-width: 460px) {
 
-    /* reduces font size and margin */
-    #para {
-        text-align: center;
-        padding-top: 6px;
-        font-size: 14pt;
-        line-height: 1.5;
-    }
-   
-    /* reduces font size and margin */
-    #p1 {
-        font-size: 5vh;
-        margin: 4vh auto;
-    }
-   
-    /* reduces font size and margin */
-    #p2 {
-        font-size: 2.5vh;
-        margin: 2vh auto;
-    }
-   
-    /* reduces font size and margin */
-    #p3 {
-        font-size: 3.5vh;
-       margin: 2vh auto;
-    }
+     /* reduces font size and margin */
+     #para {
+         text-align: center;
+         padding-top: 6px;
+         font-size: 14pt;
+         line-height: 1.5;
+     }
+
+     /* reduces font size and margin */
+     #p1 {
+         font-size: 5vh;
+         margin: 4vh auto;
+     }
+
+     /* reduces font size and margin */
+     #p2 {
+         font-size: 2.5vh;
+         margin: 2vh auto;
+     }
+
+     /* reduces font size and margin */
+     #p3 {
+         font-size: 3.5vh;
+         margin: 2vh auto;
+     }
  }

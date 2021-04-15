@@ -3,21 +3,21 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
 /* styles container displaying previously entered inputs */
-.contain1{
+.contain1 {
     margin: 2% 10%;
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
 }
 
 /* sets background and margin of container displaying RideShare options */
-.contain2{
-    background-image: url(../images/Company-background.jpg);
+.contain2 {
+    background-image: url(../images/results-background.jpg);
     background-repeat: repeat-y;
     margin-bottom: 5em;
 }
 
 /* sets background color margin and font size of the back button text */
-.reenter{
+.reenter {
     margin: 10px;
     font-size: 25px;
     background-color: white;
@@ -25,7 +25,7 @@
 
 /* sets the background image of top banner */
 .background-image {
-    background-image: url(../images/List-Page-Background.JPG);
+    background-image: url(../images/results-top-banner.JPG);
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
@@ -58,12 +58,13 @@
     font-weight: 500;
 }
 
-.contain1 p{
+.contain1 p {
     font-size: 30px;
     font-weight: 500;
 }
 
-#totalDistance, #totalDuration{
+#totalDistance,
+#totalDuration {
     margin-left: 5px;
     width: 100px;
     font-size: 30px;
@@ -89,7 +90,7 @@
 }
 
 /* sets uber top bar color */
-#uber-color{
+#uber-color {
     margin: 0px;
     text-align: left;
     background-color: blue;
@@ -99,7 +100,7 @@
 }
 
 /* sets lyft top bar color */
-#lyft-color{
+#lyft-color {
     margin: 0px;
     text-align: left;
     background-color: palevioletred;
@@ -109,7 +110,7 @@
 }
 
 /* sets evo top bar color */
-#evo-color{
+#evo-color {
     margin: 0px;
     text-align: left;
     background-color: gold;
@@ -119,7 +120,7 @@
 }
 
 /* sets modo top bar color */
-#modo-color{
+#modo-color {
     margin: 0px;
     text-align: left;
     background-color: plum;
@@ -154,18 +155,18 @@
 }
 
 /* sets layout the links in each list option container */
-.end-links{
+.end-links {
     display: flex;
     justify-content: space-evenly;
 }
 
 /* sets size of link font */
-.end-links a{
+.end-links a {
     font-size: 20px;
 }
 
 /* sets link button color and font size */
-.end-button{
+.end-button {
     background-color: #38b48b;
     font-size: 25px;
 }
@@ -178,6 +179,7 @@
 
 /* Display below 910px of width */
 @media (max-width: 910px) {
+
     /* changes list options to display in one column */
     #list {
         display: grid;
@@ -186,8 +188,8 @@
     }
 
     /* hides display of full screen text */
-    #full-screen-text{
-        display:none;
+    #full-screen-text {
+        display: none;
     }
 
     /* changes display layout of reentered info section to a column */
@@ -216,12 +218,13 @@
         border-radius: 3px;
         font-weight: 300;
     }
-    
-    .contain1 p{
+
+    .contain1 p {
         font-size: 15px;
     }
-    
-    #totalDistance, #totalDuration{
+
+    #totalDistance,
+    #totalDuration {
         margin-left: 5px;
         width: 60px;
         font-size: 15px;

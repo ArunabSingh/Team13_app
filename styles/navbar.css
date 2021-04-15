@@ -49,7 +49,7 @@ body {
 }
 
 /* changes the background, adds a border, and changes the cursor to pointer when hovering the logout button */
-#btnLogout:hover{
+#btnLogout:hover {
     background-image: linear-gradient(rgba(25, 102, 38, 0.986), #33a852);
     border-radius: 0px 0px 15px 15px;
     border: 0px double rgb(0, 0, 0, .2);
@@ -110,12 +110,14 @@ body {
 
 /* mediaquery for when max width is 880px */
 @media (max-width: 880px) {
+
     /* changes flex direction to column and aligns items to flex start */
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
-/* changes the toggle button display to flex */
+
+    /* changes the toggle button display to flex */
     .toggle-button {
         display: flex;
     }
@@ -147,8 +149,9 @@ body {
         display: flex;
     }
 }
+
 /* Resolution for extremely small devices */
-@media (max-width: 350px){
+@media (max-width: 350px) {
     .brand-title {
         font-size: 2rem;
         margin: .3rem;
@@ -156,7 +159,8 @@ body {
         color: white;
         letter-spacing: 3px;
     }
-/* sets top for toggle button */
+
+    /* sets top for toggle button */
     .toggle-button {
         top: 1.5rem;
     }

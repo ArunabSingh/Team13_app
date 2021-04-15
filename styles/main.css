@@ -158,7 +158,7 @@ h1 {
 }
 
 /* changes background color of the 'Get Estimate' button when hovered over */
-.btn-xl:hover{
+.btn-xl:hover {
     background-color: #78d390;
 }
 
@@ -167,21 +167,22 @@ a {
     display: block;
 }
 
- /* mediaquery for when max width is 720px */
-@media (max-width:720px){
-    
+/* mediaquery for when max width is 720px */
+@media (max-width:720px) {
+
     /* reduces size of button text for 'Get Estimate' */
-    .btn-xl{
+    .btn-xl {
         font-size: 20pt;
         font-weight: 400;
         width: fit-content;
     }
 }
- /* mediaquery for when max width is 520px */
-@media (max-width:520px){
+
+/* mediaquery for when max width is 520px */
+@media (max-width:520px) {
 
     /* reduces size of button text for 'Get Estimate' */
-    .btn-xl{
+    .btn-xl {
         font-size: 12pt;
         font-weight: 100;
         width: fit-content;

@@ -31,20 +31,20 @@ getUserAttributes();
 function displayData() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-        db.collection("users").doc(user.uid).collection("Routes") //Refers to the subcollection called Routes inside every user collection
-            .limit(10) //limits the trips shown on teh profile page to 9
-            .get()
-            .then(function (snap) {
-                snap.forEach(function (doc) {
-                    var orig = doc.data().OriginLocation; //gets the origin location field
-                    var dest = doc.data().DestinationLocation; //gets the destination field
-                    var dist = doc.data().Distance; //gets the destination field
-                    var dur = doc.data().Duration; //gets the destination field
+            db.collection("users").doc(user.uid).collection("Routes") //Refers to the subcollection called Routes inside every user collection
+                .limit(10) //limits the trips shown on teh profile page to 9
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function (doc) {
+                        var orig = doc.data().OriginLocation; //gets the origin location field
+                        var dest = doc.data().DestinationLocation; //gets the destination field
+                        var dist = doc.data().Distance; //gets the destination field
+                        var dur = doc.data().Duration; //gets the destination field
 
-                    var container = $(`<div class = "trip"><h4>Trip Info</h4><b>From:</b> ${orig}<br><b>To:</b>${dest}<br><b>Distance:</b> ${dist}<br><b>Duration:</b> ${dur}</div>`); //Creates a div element with the required output
-                    $("#Searches").append(container); // Appends the div element to the div element with id #Searches in the profile.html page
+                        var container = $(`<div class = "trip"><h4>Trip Info</h4><b>From:</b> ${orig}<br><b>To:</b>${dest}<br><b>Distance:</b> ${dist}<br><b>Duration:</b> ${dur}</div>`); //Creates a div element with the required output
+                        $("#Searches").append(container); // Appends the div element to the div element with id #Searches in the profile.html page
+                    })
                 })
-            })
         }
     })
 }

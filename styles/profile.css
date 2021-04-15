@@ -24,7 +24,7 @@
 }
 
 /* changes background color of previous trips and adds a border and padding */
-.trip{
+.trip {
     padding: 10px;
     background: whitesmoke;
     border: 5px solid #c1c1c1;
