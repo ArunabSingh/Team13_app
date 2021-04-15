@@ -1,7 +1,9 @@
+  /* sets body height to the whole viewport height */
   body {
     height: 100vh;
   }
 
+/* centers header text vert and horz.  styles font */
   header h1 {
     margin: 0;
     position: absolute;
@@ -13,6 +15,7 @@
     font-size: 32pt;
   }
 
+  /* sets background color, size, margin, and border */
   #loginBackground {
     background-color: #e8f6e8;
     background-repeat: cover;
