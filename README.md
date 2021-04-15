@@ -9,7 +9,7 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+This browser based web application will compare prices for different ride sharing companies and present the user with the best prices they can choose from. Additionally we have a profile page which diplays personal information of the user and their previous made searches. We added a Reviews feature for each company where the user can submit their review and reate the company out of 5 stars. Added Help page to help the user navigate through the app and read about the app and its uses and provide our contact information.
 	
 ## Technologies
 Technologies used for this project:
