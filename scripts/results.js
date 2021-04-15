@@ -33,12 +33,12 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 //Converts the distance calculated from the previous
 //page into a Float which is further used in calculations.
-var distInKm = parseFloat(distance.innerHTML);
+var distInKm = parseFloat(distance.value);
 console.log(distInKm);
 
 //Converts the duration calculated from the previous
 //page into a Float which is further used in calculations.
-var durInMins = parseFloat(duration.innerHTML);
+var durInMins = parseFloat(duration.value);
 console.log(durInMins);
 
 //Calculating fares based on distance and duration
