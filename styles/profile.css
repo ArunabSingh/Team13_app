@@ -1,3 +1,4 @@
+/* sets background color and sets page to fill screen while also centering text */
 #profile {
     background-color: #e8f6e8;
     margin: auto 0;
@@ -6,6 +7,7 @@
     text-align: center;
 }
 
+/* sets the style for the User Profile's previous searches */
 #Searches {
     margin: auto 10%;
     text-align: left;
@@ -16,9 +18,12 @@
     grid-gap: 25px;
 }
 
+/* centers the header text of each previous trip */
 .trip h4 {
     text-align: center;
 }
+
+/* changes background color of previous trips and adds a border and padding */
 .trip{
     padding: 10px;
     background: whitesmoke;
@@ -32,6 +37,7 @@
         margin: auto 0;
     }
 
+    /* reduces from 3 columns to 1 and also reduces margin */
     #Searches {
         margin: auto 5%;
         grid-template-columns: 1fr;

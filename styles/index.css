@@ -1,10 +1,13 @@
+ /* imports fonts */
  @import url('https://fonts.googleapis.com/css?family=Roboto');
  @import url('https://fonts.googleapis.com/css?family=Dosis');
 
+ /* sets default font of the body */
  body {
      font-family: 'Dosis', sans-serif;
  }
 
+ /* sets background image source and layout */
  #bg {
      background-image: url(../images/bgLandingPage.jpg);
      height: 100vh;
@@ -13,37 +16,40 @@
      background-size: cover;
      position: relative;
  }
+
+ /* sets height of banner */
  .banner{
      height: 10vh;
  }
 
+ /* sets all margins to 0px */
  * {
      margin: 0px;
  }
 
-
+/* centers paragraph and sets letter style */
  #para {
      text-align: center;
      padding-top: 8.5px;
      font-size: 20pt;
      line-height: 1.7;
  }
-
+/* sets margins and font size */
  #p1 {
      font-size: 8vh;
      margin: 5vh auto;
  }
-
+/* sets margins and font size */
  #p2 {
      font-size: 5vh;
      margin: 3vh auto;
  }
-
+/* sets margins and font size */
  #p3 {
      font-size: 5vh;
     margin: 2vh auto;
  }
-
+/* styles button.  sets cursor to pointer. */
  .button1 {
      padding: 2vh;
      background-color: #38b48b;
@@ -53,23 +59,27 @@
 
  }
 
+ /* centers anchors and sets color to white */
  a {
      color: white;
      text-decoration: none;
      text-align: center;
  }
 
+ /* changes colors of button on hover */
  .button1:hover {
      color: white;
      background-color: turquoise;
  }
 
+ /* centers button and set size and margin */
  #button-container {
      text-align: center;
      height: 12vh;
      margin-bottom: 5vh;
  }
 
+ /* sets layout and style of textbox, adds a box shadow */
  #textBox {
      margin: auto;
      width: 100%;
@@ -79,7 +89,10 @@
      box-shadow: 3px 3px 15px rgb(0, 0, 0, 1);
  }
 
+ /* mediaquery for when max width is 1020px */
  @media (max-width: 1020px){
+
+    /* reduces font size and margin */
     #para {
         text-align: center;
         padding-top: 6px;
@@ -87,23 +100,29 @@
         line-height: 1.5;
     }
    
+    /* reduces font size and margin */
     #p1 {
         font-size: 6vh;
         margin: 4vh auto;
     }
    
+    /* reduces font size and margin */
     #p2 {
         font-size: 3vh;
         margin: 2vh auto;
     }
    
+    /* reduces font size and margin */
     #p3 {
         font-size: 4vh;
        margin: 2vh auto;
     }
  }
 
+  /* mediaquery for when max width is 460px */
  @media (max-width: 460px){
+
+    /* reduces font size and margin */
     #para {
         text-align: center;
         padding-top: 6px;
@@ -111,16 +130,19 @@
         line-height: 1.5;
     }
    
+    /* reduces font size and margin */
     #p1 {
         font-size: 5vh;
         margin: 4vh auto;
     }
    
+    /* reduces font size and margin */
     #p2 {
         font-size: 2.5vh;
         margin: 2vh auto;
     }
    
+    /* reduces font size and margin */
     #p3 {
         font-size: 3.5vh;
        margin: 2vh auto;

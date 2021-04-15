@@ -1,24 +1,29 @@
+/* imports fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 
+/* styles container displaying previously entered inputs */
 .contain1{
     margin: 2% 10%;
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
 }
 
+/* sets background and margin of container displaying RideShare options */
 .contain2{
     background-image: url(../images/Company-background.jpg);
     background-repeat: repeat-y;
     margin-bottom: 5em;
 }
 
+/* sets background color margin and font size of the back button text */
 .reenter{
     margin: 10px;
     font-size: 25px;
     background-color: white;
 }
 
+/* sets the background image of top banner */
 .background-image {
     background-image: url(../images/List-Page-Background.JPG);
     background-repeat: repeat-x;
@@ -27,6 +32,7 @@
     height: 650px;
 }
 
+/* sets background color, centers, and adds box shadow to the previously entered info section */
 .background-color {
     text-align: center;
     height: 70%;
@@ -38,6 +44,7 @@
     align-items: center;
 }
 
+/* sets the spacing, color, and border of the start and finish previously entered info displayed */
 #start,
 #finish {
     padding: 15px 15px;
@@ -63,21 +70,25 @@
     font-weight: 500;
 }
 
+/* centers contents of each list option */
 .listOpt p {
     text-align: center;
     font-size: 25px;
 }
 
+/* sets list of options to display in two columns */
 #list {
     display: grid;
     grid-template-columns: 40% 40%;
     grid-gap: 10%;
 }
 
+/* sets a border on each list option */
 #list div {
     border: 7px solid whitesmoke;
 }
 
+/* sets uber top bar color */
 #uber-color{
     margin: 0px;
     text-align: left;
@@ -87,6 +98,7 @@
     padding: 0px;
 }
 
+/* sets lyft top bar color */
 #lyft-color{
     margin: 0px;
     text-align: left;
@@ -96,6 +108,7 @@
     padding: 0px;
 }
 
+/* sets evo top bar color */
 #evo-color{
     margin: 0px;
     text-align: left;
@@ -105,6 +118,7 @@
     padding: 0px;
 }
 
+/* sets modo top bar color */
 #modo-color{
     margin: 0px;
     text-align: left;
@@ -114,20 +128,24 @@
     padding: 0px;
 }
 
+/* sets padding for list of options */
 .listOpt {
     padding: 10px;
 }
 
+/* sets company logo image size and border radius */
 .listOpt p img {
     width: 70px;
     height: 70px;
     border-radius: 20px;
 }
 
+/* sets width of button in list option */
 .listOpt p button {
     width: fit-content;
 }
 
+/* sets the display layout of each individual list option container */
 .listOpt {
     display: grid;
     border-radius: 20px;
@@ -135,40 +153,50 @@
     border-color: white;
 }
 
+/* sets layout the links in each list option container */
 .end-links{
     display: flex;
     justify-content: space-evenly;
 }
 
+/* sets size of link font */
 .end-links a{
     font-size: 20px;
 }
 
+/* sets link button color and font size */
 .end-button{
     background-color: #38b48b;
     font-size: 25px;
 }
+
+/* changes link button color when hovered over */
 .end-button:hover {
     color: white;
     background-color: turquoise;
 }
 
+/* Display below 910px of width */
 @media (max-width: 910px) {
+    /* changes list options to display in one column */
     #list {
         display: grid;
         grid-template-columns: 100%;
         grid-gap: 10px;
     }
 
+    /* hides display of full screen text */
     #full-screen-text{
         display:none;
     }
 
+    /* changes display layout of reentered info section to a column */
     .contain1 {
         display: flex;
         flex-direction: column;
     }
 
+    /* reduces size of background image banner at top */
     .background-image {
         background-size: cover;
         background-repeat: repeat-x;
