@@ -58,7 +58,7 @@ body {
 
 /* styles the individual links in the navbars, sets margins, and sets list-style to none */
 .navbar-links li {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     list-style: none;
     margin: 1vw;
 }

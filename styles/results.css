@@ -48,11 +48,26 @@
 #start,
 #finish {
     padding: 15px 15px;
+    width: 400px;
+    font-size: 30px;
     margin-left: 10px;
     color: black;
     background-color: white;
     border: solid 1px grey;
     border-radius: 3px;
+    font-weight: 500;
+}
+
+.contain1 p{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#totalDistance, #totalDuration{
+    margin-left: 5px;
+    width: 100px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 /* centers contents of each list option */
@@ -189,14 +204,28 @@
         height: 500px;
     }
 
-    /* reduces margin and font size of reentered info section */
-    #start, #finish {
-    padding: 10px 10px;
-    margin-left: 8px;
-    color: black;
-    border: solid 1px grey;
-    border-radius: 3px;
-    font-size: 15px;
-}
+    #start,
+    #finish {
+        padding: 10px 10px;
+        width: 200px;
+        font-size: 15px;
+        margin-left: 8px;
+        color: black;
+        background-color: white;
+        border: solid 1px grey;
+        border-radius: 3px;
+        font-weight: 300;
+    }
+    
+    .contain1 p{
+        font-size: 15px;
+    }
+    
+    #totalDistance, #totalDuration{
+        margin-left: 5px;
+        width: 60px;
+        font-size: 15px;
+    }
+
 
 }

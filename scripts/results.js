@@ -8,10 +8,10 @@ var myobj = JSON.parse(localStorage.getItem('formdata'));
 console.log(myobj);
 
 //Assigns the values entered in the previous page to their respective fields on this page.
-origin.innerHTML = myobj.originLoc;
-destination.innerHTML = myobj.destLoc;
-distance.innerHTML = myobj.totalDist;
-duration.innerHTML = myobj.totalDur;
+origin.value = myobj.originLoc;
+destination.value = myobj.destLoc;
+distance.value = myobj.totalDist;
+duration.value = myobj.totalDur;
 
 /**
  * Writes the data entered on the previous page to a subcollection
