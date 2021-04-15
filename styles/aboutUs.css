@@ -34,7 +34,7 @@
 header {
     background-image: url(../images/AboutUs2.png);
     background-size: 100% 100%;
-    height: 14rem;
+    height: 20rem;
     width: 100%;
     position: relative;
     border-bottom: 1.5px solid black;
@@ -100,4 +100,10 @@ header {
 #contactinfo{
     width: 80%;
     margin: 0 auto;
+}
+
+@media (max-width:720px){
+  header {
+    height: 14rem;
+  }
 }
